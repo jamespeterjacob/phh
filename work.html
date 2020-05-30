@@ -1430,22 +1430,18 @@
         }
 
         .scene {
-            /*border: 1px solid #CCC;*/
+            border: 1px solid #CCC;
             margin: 40px 0;
             position: relative;
-            width: 60%;
-            height: auto;
-            /*width: 600px;
-            height: 400px;*/
+            width: 500px;
+            height: 300px;
             margin: 80px auto;
             perspective: 1000px;
         }
 
         .carousel {
-            /*width: 600px;
-            height: 400px;*/
             width: 100%;
-            height: auto;
+            height: 100%;
             position: absolute;
             transform: translateZ(-288px);
             transform-style: preserve-3d;
@@ -1454,13 +1450,11 @@
 
         .carousel__cell {
             position: absolute;
-            /*width: 600px;
-            height: 400px;*/
-            width: 80%;
-            height: auto;
+            width: 500px;
+            height: 300px;
             left: 10px;
             top: 10px;
-            /*border: 2px solid black;*/
+            border: 2px solid black;
             line-height: 116px;
             font-size: 80px;
             font-weight: bold;
@@ -1546,57 +1540,13 @@
         .carousel-options {
             text-align: center;
             position: relative;
-            top: -20px;
             z-index: 2;
             background-color: transparent;
-        }
-
-        @media screen and (max-width: 600px) {
-
-            .scene {
-                /*border: 1px solid #CCC;*/
-                /*margin: 40px 0;
-                position: relative;*/
-                width: 100%;
-                height: auto;
-                /*width: 600px;
-            height: 400px;*/
-                /*margin: 80px auto;*/
-                perspective: 1000px;
-            }
-
-            .carousel {
-                /*width: 600px;
-            height: 400px;*/
-                width: 100%;
-                height: auto;
-                position: absolute;
-                transform: translateZ(-288px);
-                transform-style: preserve-3d;
-                transition: transform 1s;
-            }
-
-            .carousel__cell {
-                position: absolute;
-                /*width: 600px;
-            height: 400px;*/
-                width: 100%;
-                height: auto;
-                /*left: 10px;
-                top: 10px;
-                border: 2px solid black;
-                line-height: 116px;
-                font-size: 80px;
-                font-weight: bold;
-                color: white;*/
-                text-align: center;
-                transition: transform 1s, opacity 1s;
-            }
         }
     </style>
     <style>
         .open-button {
-            background-color: #FF4081;
+            background-color: #ff4a27;
             color: white;
             padding: 16px 20px;
             border: none;
@@ -1698,13 +1648,20 @@
         }
 
         .responsive {
-            width: auto;
-            height: 50%;
+            width: 80%;
+            height: auto;
             background-color: transparent;
         }
 
+        .center {
+            margin: auto;
+            width: 50%;
+            /*border: 3px solid green;*/
+            /*padding: 10px;*/
+        }
         /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
+            
             .column {
                 width: 100%;
             }
@@ -1722,237 +1679,208 @@
                 height: auto;
                 background-color: transparent;
             }
-        }
-    </style>
-    <style>
-        #container1 {
-            width: 600px;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .circle {
-            border-radius: 50%;
-            background-color: deepskyblue;
-            width: 150px;
-            height: 150px;
-            position: absolute;
-            opacity: 0;
-            animation: scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32);
-        }
-
-        .item {
-            z-index: 100;
-            padding: 5px;
-        }
-
-            .item img {
-                width: 150px;
-            }
-
-        @keyframes scaleIn {
-            from {
-                transform: scale(.5, .5);
-                opacity: .5;
-            }
-
-            to {
-                transform: scale(2.5, 2.5);
-                opacity: 0;
+            .hidden {
+                display: none;
             }
         }
     </style>
 </head>
 <body style="min-height:100%; background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)">
-
-    <div class="hero " data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero" style="background-image: url('https://jamespeterjacob.github.io/phh/bg.jpg');">
-        <div class="overlay background"></div>
+    <div class="hero" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero" style="min-height:100vh">
+        <!--<div class="overlay background"></div>-->
         <div class="hero-center">
-            <h1 class="hero__logo" data-aos="zoom-in"></h1>
-            <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
-                <span>
-                    IT TAKES 7 SECONDS TO MAKE AN IMPRESSION
-                </span>
-            </h2>
-            <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="2500">
-                <span>WE DO IT IN 5</span>
-            </h2>
+            <h1 class="hero__logo" data-aos="zoom-in">Design Faster Collaborate Better</h1>
+            <!--<div class="container">
+                <h2 class="hero__text hidden" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400"><span>WE'VE BROKEN FREE OF AGENCY VS. PRODUCTION SILOS AND HAVE DEVELOPED A PLACE WHERE BOTH CREATIVE AND ANALYTICAL MINDS CAN THRIVE.</span></h2>
+            </div>-->
+            <div class="container">
+                <div class="row">
+                    <div class="column" style="max-width:33.33%">
+                        <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                        <h4>Interactive Prototyping</h4>
+                    </div>
+                    <div class="column" style="max-width:33.33%">
+                        <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                        <h4>Painless Collaboration</h4>
+                    </div>
+                    <div class="column" style="max-width:33.33%">
+                        <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                        <h4>Scalable Systems</h4>
+                    </div>
+                </div>
+            </div>
         </div>
-        <span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="3500">
-            About Us <br>
+        <span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
+            Expertise <br>
             <i class="chevron bottom"></i>
         </span>
-        <div class="item"></div>
-        <div class="circle" style="animation-delay: 0s"></div>
-        <div class="circle" style="animation-delay: 1s"></div>
-        <div class="circle" style="animation-delay: 2s"></div>
-        <div class="circle" style="animation-delay: 3s"></div>
-
-
     </div>
 
-    <div style="background-color:transparent; font-family:'Segoe UI'">
+    <div style="background-color: transparent; font-family: 'Segoe UI'">
         <ul>
             <li>
                 <a class="active" href="#home">
                     <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width: 20px">
                 </a>
             </li>
-            <li><a href="#news">Work</a></li>
-            <li><a href="#contact">About</a></li>
+            <li><a href="#home">Home</a></li>
+            <!--<li><a href="#work">Work</a></li>-->
+            <li><a href="#contact">Contact</a></li>
         </ul>
-
     </div>
 
-    <!--About Us-->
+
+
+
+    <!--Our Skills-->
     <section class="section section--code" style="min-height:100vh">
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
-                <h1 class="hero__logo" data-aos="zoom-in"><span>Design Agency That Delivers Results</span></h1>
+                <h1 class="hero__logo" data-aos="zoom-in">WE WORK DAY IN DAY OUT TO ELEVATE BRANDS</h1>
+                <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white"><span>For over ten years we have created memorable and effective designs. Designs that captivates. Designs that delivers results. Most importantly... Designs that helps our clients grow.</span></h2>
+            </div>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-duration="3000">
+            <div class="container">
                 <div class="row">
-                    <div class="column" style="height:100%">
-                        <div class="" data-aos="flip-up">
+                    <div class="column2">
+                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
                             <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
                         </div>
-                        <h2>Web Design & Hosting</h2>
+                        <h2>WEBSITE DESIGN</h2>
+                        <p>With a single code-base Responsive websites deliver stronger SEO, faster load times, one-stop analytics, enhanced site performance, improved usability, and more targeted messaging. And thanks to a single source administrative platform all updates and are made at the same time.</p>
+                        <p>Building and maintaining a site for laptops, tablets and mobile devices can be time-consuming and just plain time-wasting. With industry-approved practices in creating the best Responsive websites, we get your site up and running once. Then it magically conforms to the various devices that pull it up.</p>
                     </div>
-                    <div class="column" style="height:100%">
-                        <div class="" data-aos="flip-up">
+
+                    <div class="column2">
+                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
+                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width: 40px">
+                        </div>
+                        <h2>GRAPHIC DESIGN</h2>
+                        <p>You and I can make magic. From scroll-stopping content to impeccable production-ready work, our blend of art and science is unbeatable. Tap our seasoned writers and designers to first connect with your customers’ emotional needs and then sell product benefits. Creative is all about connecting, making a mark and eliciting a response.</p>
+                        <p>We're all about telling your story. We do that through compelling, professional design of every day materials. Business stationery, email templates, postcards, mailers, tri-fold brochures, posters, signage, power points, exhibit booths, packaging, annual reports, infographics, digital ads and so much more. Get your stuff designed. 86 the attitude.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column2">
+                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
                             <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
                         </div>
-                        <h2>Application Development</h2>
+                        <h2>COPYWRITING</h2>
+                        <p>There’s nothing like a great headline. Match it with a complimentary hero shot that makes your viewers think. Catch their attention. Clients love our copywriting services and photography team because we find just the right match for your industry, style and tone.</p>
+                        <p>Our writers take any industry, gain a deep understanding of the work and the readers. From there, we translate your message into language that resonates with them. Naturally, we make the most of your words with clear, concise and convincing messaging that motivates readers to act.</p>
                     </div>
-                    <div class="column" style="height:100%">
-                        <div class="" data-aos="flip-up">
+
+                    <div class="column2">
+                        <div class="" data-aos="flip-up" data-aos-duration="6000" style="        background-color: transparent">
                             <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
                         </div>
-                        <h2>SEO & Digital Marketing</h2>
+                        <h2>CMS</h2>
+                        <p>A Content Management System (CMS) allows you to control and administer your website in-house. Our custom CMS solutions give you full control. Now, you have the freedom to keep your site updated-to-the-minute. There’s no need to wait on a developer to shoehorn your updates into their schedule.</p>
+                        <p>Our custom CMS solutions are built to scale. You can create a manageable site, then your website can grow as your business grows. There's no limit to the number of pages that can be contained and managed in the system or channels through which content is fed.</p>
                     </div>
                 </div>
-                <div class="row" style="color:black">
-                    <div class="column2" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white">
-                        <h2 class="hero__text">From web and mobile app design & development to online marketing campaigns, our smart solutions help brands and businesses increase visibility, engagement, and revenue. Starting with a simple discovery call to creating strategic action plans, we work as a team to design, develop, and deploy websites and mobile apps into the market.</h2>
-                    </div>
-                    <div class="column2" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white">
-                        <h2 class="hero__text">We provide you access to our collaborative platform where you can manage your projects, create tasks, and schedule meetings with your dedicated team. No more gambling with freelancers and agencies, saving you time and money.</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Our Work-->
-    <section class="section section--code" style="min-height:100vh; background-color:#dae1e7">
-        <h1 class="hero__logo" data-aos="zoom-in" style="color:black">Our Work</h1>
-        <div class="scene ">
-            <div class="carousel ">
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Real Estate</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Education</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Fashion</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Photography</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Travel</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Sports</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Entertainment</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Financial Services</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Healthcare</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Consulting</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Nonprofit</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Personal</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Technology</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Marketing</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-                <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Retail</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
-                </div>
-            </div>
-            <div class="carousel-options">
-                <p>
-                    <span>
-                        <span class="previous-button" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800" style="color: #FF4081">
-                            <i class="chevron left"></i>
-                        </span>
-                    </span>
-
-                    <!--<button class="previous-button">Previous</button>-->
-                    <label>
-                        <input class="cells-range" type="range" min="3" max="15" value="3" />
-                    </label>
-                    <span>
-                        <span class="next-button" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800" style="color: #FF4081">
-                            <i class="chevron right"></i>
-                        </span>
-                    </span>
-
-                    <!--<button class="next-button">Next</button>-->
-                </p>
-                <!--<p>
-                    <button class="previous-button">Previous</button>
-                    <button class="next-button">Next</button>
-                </p>-->
-                <p style="opacity:0">
-                    Orientation:
-                    <label>
-                        <input type="radio" name="orientation" value="horizontal" checked />
-                        horizontal
-                    </label>
-                    <label>
-                        <input type="radio" name="orientation" value="vertical" />
-                        vertical
-                    </label>
-                </p>
+                <hr />
             </div>
         </div>
 
     </section>
 
-    <!--Our Guarantee-->
+    <!--Our Team-->
     <section class="section section--code" style="min-height:100vh">
+        <div class="container" data-aos="fade-up" data-aos-duration="3000">
+            <div class="container">
+                <h1 class="hero__logo" data-aos="zoom-in">Why Choose Us</h1>
+                <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white"><span>WE CULTIVATE RELATIONSHIPS THROUGH CONTENT</span></h2>
+            </div>
+        </div>
+        <div class="container " data-aos="fade-up" data-aos-duration="3000">
+            <div class="row">
+                <div class="column" style="height:100%">
+                    <h2>COMMUNICATE</h2>
+                    <p>Your positioning sets you apart from your competitors. We build a message architecture that sets the tone for written communications, and the brand guidelines that lead the way for a campaign’s visual and functional components. Through exploration of your audiences, products, market analysis and positioning, we'll uncover your unique, compelling story. The strategy that tells that story across different media in a way that moves the needle. That's your brand. On its best day.</p>
+                </div>
+                <div class="column" style="height:100%">
+                    <h2>EASY PEASY</h2>
+                    <p>And you don’t need to know complicated code. With our tailor-made, user-friendly CMS solutions, it’s super fast and easy. So if you need to get the word out fast - you're having a sale tomorrow, extended holiday hour, or any number of messages that can immediately impact sales, it’s as easy as logging into the system. Plus it’s easy to collaborate with others, since you’re all working from one consolidated platform. Plain English. Simple system.</p>
+                </div>
+                <div class="column" style="height:100%">
+                    <h2>GET IT RIGHT</h2>
+                    <p>If you’ve ever tried building a new website -- or a website redesign -- you know how complicated it can get. Beyond making sure it looks great, the site also needs to function great, by funneling prospects and customers alike through your sales process in the most efficient and effective way possible.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column" style="height:100%">
+                    <h2>THE KNOW-HOW</h2>
+                    <p>Customers expect to meet you in your website; they’d like to be treated just as you would if they showed up at your door. Designing – or redesigning – a welcoming website takes a working knowledge of the ever-evolving field of best practices in navigation techniques, site design, and overall site functionality.</p>
+                </div>
+                <div class="column" style="height:100%">
+                    <h2>YOU'RE IN GOOD HANDS</h2>
+                    <p>You’ve got it all. We can host your website, software, files, images, whatever you need. We provide you with space-age technology that guarantees 99.999% uptime. With our hosting & maintenance services, you know you're covered. We’ll customize, configure and install your website and provide ongoing maintenance. Everything is scalable so your space can grow as you do. Let us be your hosts. What's more, we're on-call if something breaks.</p>
+                </div>
+                <div class="column" style="height:100%">
+                    <h2>TOTAL PEACE OF MIND</h2>
+                    <p>We take extra safety precautions. Our off-site, co-located servers are continuously backed up and are protected from fire, floods, or other natural disasters. 24/7 security ensures your data stays safe, and multiple power redundancies and emergency generators means you’ll never lose power. And with a super-fast internet connection speed, everything is instant.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--Our Clients-->
+    <!--<section class="section section--code" style="min-height:100vh">
+        <div class="container" data-aos="fade-up" data-aos-duration="3000">
+            <div class="container">
+                <h1 class="hero__logo" data-aos="zoom-in">WE CULTIVATE RELATIONSHIPS THROUGH CONTENT</h1>
+                <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white"><span>For over ten years we have created memorable and effective designs. Designs that captivates. Designs that delivers results. Most importantly... Designs that helps our clients grow.</span></h2>
+            </div>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-duration="3000">
+            <div class="container">
+                <hr />
+                <div class="row">
+                    <div class="column2" style="border-right:solid; border-color:white">
+                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
+                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                        </div>
+                        <h2>Performance</h2>
+                        <p>Website speed, or website performance, refers to how quickly a browser is able to load fully functional webpages from a given site. Conversely, sites that load quickly will typically receive more traffic and have better conversion rates.</p>
+                    </div>
+
+                    <div class="column2">
+                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
+                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                        </div>
+                        <h2>Best Practices</h2>
+                        <p>Web design standards like navigation, color scheme, and utilization of social media and email marketing will ensure greater business success and optimization of leads.</p>
+
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="column2" style="border-right:solid; border-color:white">
+                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
+                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                        </div>
+                        <h2>Accessibility</h2>
+                        <p>When websites and web tools are properly designed, people with disabilities can use them. Web accessibility depends on several components working together, including web technologies, web browsers and other "user agents", authoring tools, and websites. </p>
+                    </div>
+
+                    <div class="column2">
+                        <div class="" data-aos="flip-up" data-aos-duration="6000" style="background-color: transparent">
+                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                        </div>
+                        <h2>SEO</h2>
+                        <p>Search Engine Optimization is the practice of increasing both the quality and quantity of website traffic, as well as exposure to brand, through non-paid (aka "organic") search engine results.</p>
+                    </div>
+                </div>
+                <hr />
+            </div>
+        </div>
+
+    </section>-->
+    <!--Our Guarantee-->
+    <!--<section class="section section--code" style="min-height:100vh">
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <h1 class="hero__logo" data-aos="zoom-in">Our SLA</h1>
@@ -1964,14 +1892,14 @@
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <div class="row">
-                    <div class="column4" style="height:100%">
+                    <div class="column4">
                         <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
                             <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
                         </div>
                         <h2>Performance</h2>
                         <p>Website speed, or website performance, refers to how quickly a browser is able to load fully functional webpages from a given site. Conversely, sites that load quickly will typically receive more traffic and have better conversion rates.</p>
                     </div>
-                    <div class="column4" style="height:100%">
+                    <div class="column4">
                         <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
                             <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
                         </div>
@@ -1979,14 +1907,14 @@
                         <p>Web design standards like navigation, color scheme, and utilization of social media and email marketing will ensure greater business success and optimization of leads.</p>
 
                     </div>
-                    <div class="column4" style="height:100%">
+                    <div class="column4">
                         <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
                             <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
                         </div>
                         <h2>Accessibility</h2>
                         <p>When websites and web tools are properly designed, people with disabilities can use them. Web accessibility depends on several components working together, including web technologies, web browsers and other "user agents", authoring tools, and websites. </p>
                     </div>
-                    <div class="column4" style="height:100%">
+                    <div class="column4">
                         <div class="" data-aos="flip-up" data-aos-duration="6000" style="background-color: transparent">
                             <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
                         </div>
@@ -1996,63 +1924,39 @@
                 </div>
             </div>
         </div>
-    </section>
-
-
-    <!--News-->
-    <section class="section section--code" style="min-height:100vh">
-        <div class="container" data-aos="fade-up" data-aos-duration="3000">
-            <div class="container">
-                <h1 class="hero__logo" data-aos="zoom-in">News</h1>
-                <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white"><span>For over ten years we have created memorable and effective designs. Designs that captivates. Designs that delivers results. Most importantly... Designs that helps our clients grow.</span></h2>
-            </div>
-        </div>
-        <div class="container" data-aos="fade-up" data-aos-duration="3000">
-            <div class="row" data-aos="fade-up" data-aos-duration="3000">
-                <div class="container" data-aos="fade-up" data-aos-duration="3000">
-                    <div class="column2" data-aos="flip-down">
-                        <h2>Best Practices</h2>
-                        <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:75%;height:auto">
-                        <div class="" data-aos="flip-down" data-aos-duration="3000" style="background-color: transparent">
-                            <p>Web design standards like navigation, color scheme, and utilization of social media and email marketing will ensure greater business success and optimization of leads.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="container" data-aos="fade-up" data-aos-duration="3000">
-                    <div class="column2" data-aos="flip-down">
-                        <h2>Best Practices</h2>
-                        <div class="" data-aos="flip-down" data-aos-duration="3000" style="background-color: transparent">
-                            <p>Web design standards like navigation, color scheme, and utilization of social media and email marketing will ensure greater business success and optimization of leads.</p>
-                        </div>
-                        <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:75%;height:auto">
-                    </div>
-                    </div>
-                </div>
-            </div>
-        <button class="open-button" onclick="openForm()"><p id="my-form-status">Contact</p></button>
+        <button class="open-button" onclick="openForm()"><p id="my-form-status">Email</p></button>
 
         <div class="form-popup" id="myForm">
             <form id="my-form" action="https://formspree.io/mayqvaby" method="POST" class="form-container">
-                <span style="color: black; font-size: 30px; font-weight: 300; float: right" class="close" onclick="closeForm()">&times;</span>
+                <span style="color:black; font-size:30px; font-weight:300; float:right" class="close" onclick="closeForm()">&times;</span>
                 <p id="my-form-status"></p>
                 <input type="email" name="email" placeholder="Email Address" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" />
                 <input type="number" name="phone" placeholder="Phone" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" />
 
-                <textarea type="text" placeholder="Your Message" name="message" style="width: 100%; height: 300px;padding: 12px 20px;margin: 8px 0;display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"></textarea>
-                <button type="submit" id="my-form-button" style="width: 100%;background-color: #2aaff0;color: white;padding: 14px 20px;margin: 8px 0;border: none;border-radius: 4px;cursor: pointer;">Submit</button>
+                <textarea type="text" placeholder="Your Message" name="message" style="width: 100%; height:300px; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"></textarea>
+                <button type="submit" id="my-form-button" style="width: 100%; background-color: #2aaff0; color: white; padding: 14px 20px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
             </form>
         </div>
-    </section>
-
+    </section>-->
     <!--Footer-->
+    <button class="open-button" onclick="openForm()"><p id="my-form-status">Email</p></button>
+
+    <div class="form-popup" id="myForm">
+        <form id="my-form" action="https://formspree.io/mayqvaby" method="POST" class="form-container">
+            <span style="color:black; font-size:30px; font-weight:300; float:right" class="close" onclick="closeForm()">&times;</span>
+            <p id="my-form-status"></p>
+            <input type="email" name="email" placeholder="Email Address" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" />
+            <input type="number" name="phone" placeholder="Phone" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" />
+
+            <textarea type="text" placeholder="Your Message" name="message" style="width: 100%; height:300px; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"></textarea>
+            <button type="submit" id="my-form-button" style="width: 100%; background-color: #2aaff0; color: white; padding: 14px 20px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
+        </form>
+    </div>
     <footer>
         <p><a href="mailto:info@ceferin.com">© Ceferin Web Solutions, 2020 | info@ceferin.com </a></p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js" ></script>-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
         function openForm() {
             document.getElementById("myForm").style.display = "block";
@@ -2062,6 +1966,11 @@
             document.getElementById("myForm").style.display = "none";
         }
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js" ></script>-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
         window.addEventListener("DOMContentLoaded", function () {
 
@@ -2109,12 +2018,22 @@
             xhr.send(data);
         }
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js" ></script>-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+
     <script>
         AOS.init({
             easing: 'ease-out-back',
             duration: 1000
         });
     </script>
+
     <script>
         hljs.initHighlightingOnLoad();
 
@@ -2201,6 +2120,5 @@
         onOrientationChange();
 
     </script>
-
 </body>
 </html>
