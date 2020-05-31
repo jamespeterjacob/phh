@@ -118,7 +118,7 @@
 
         a {
             text-decoration: none;
-            color: #FF4081;
+            color: #ff4a27;
         }
 
         /**
@@ -1410,10 +1410,10 @@
             }
 
                 li a:hover:not(.active) {
-                    color: #FF4081;
+                    color: #ff4a27;
                     font-weight: 600;
                     text-decoration-line: underline;
-                    text-decoration-color: #FF4081;
+                    text-decoration-color: #ff4a27;
                 }
 
         .active {
@@ -1596,7 +1596,7 @@
     </style>
     <style>
         .open-button {
-            background-color: #FF4081;
+            background-color: #ff4a27;
             color: white;
             padding: 16px 20px;
             border: none;
@@ -1735,6 +1735,36 @@
             position: relative;
         }
 
+        .text-block1 {
+            /*position: absolute;*/
+            top: 50%;
+            /*left: 20px;*/
+            width:100%;
+            /*margin-right:20px;*/
+            background: rgba(0, 0, 0,0.2);
+            color: white;
+            /*padding-left: 20px;
+            padding-right: 20px;*/
+        }
+        .text-block2 {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            background: rgba(0, 0, 0,0.2);
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .text-block3 {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0,0.2);
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
         .circle {
             border-radius: 50%;
             background-color: deepskyblue;
@@ -1772,19 +1802,27 @@
     <div class="hero " data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero" style="background-image: url('https://jamespeterjacob.github.io/phh/bg.jpg');">
         <div class="overlay background"></div>
         <div class="hero-center">
-            <h1 class="hero__logo" data-aos="zoom-in"></h1>
+            <h1 class="hero__logo" data-aos="zoom-in">Functional Web Solutions</h1>
             <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
                 <span>
                     IT TAKES 7 SECONDS TO MAKE AN IMPRESSION
                 </span>
             </h2>
-            <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="2500">
-                <span>WE DO IT IN 5</span>
-            </h2>
+            <h2><span class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="1600" style="color:#ff4a27">WE DO IT IN 5</span></h2>
+           
         </div>
+        <!--<div class="text-block1">
+            <h5 style="font-size:50px" >Upgrade Your <bold>WEBSITE</bold><br /> Grow Your <bold>BUSINESS</bold></h5>
+        </div>-->
+        <!--<div class="text-block2">
+            <h5>Upgrade Your <bold>WEBSITE</bold>Grow Your <bold>BUSINESS</bold></h5>
+        </div>-->
+        <!--<div class="text-block3">
+            <h5>Upgrade Your <bold>WEBSITE</bold>Grow Your <bold>BUSINESS</bold></h5>
+        </div>-->
         <span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="3500">
             About Us <br>
-            <i class="chevron bottom"></i>
+            <i class="chevron bottom" style="color:#ff4a27"></i>
         </span>
         <div class="item"></div>
         <div class="circle" style="animation-delay: 0s"></div>
@@ -1819,7 +1857,7 @@
                         <div class="" data-aos="flip-up">
                             <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
                         </div>
-                        <h2>Web Design & Hosting</h2>
+                        <h2>Mobile Design & <br />Web Hosting</h2>
                     </div>
                     <div class="column" style="height:100%">
                         <div class="" data-aos="flip-up">
@@ -1836,10 +1874,10 @@
                 </div>
                 <div class="row" style="color:black">
                     <div class="column2" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white">
-                        <h2 class="hero__text">From web and mobile app design & development to online marketing campaigns, our smart solutions help brands and businesses increase visibility, engagement, and revenue. Starting with a simple discovery call to creating strategic action plans, we work as a team to design, develop, and deploy websites and mobile apps into the market.</h2>
+                        <h2 class="hero__text">From design & development to online marketing campaigns, our smart solutions help brands and businesses increase <bold style="color:#ff4a27">Visibility</bold>, <bold style="color:#ff4a27">Engagement</bold>, and <bold style="color:#ff4a27">Revenue</bold>. <br /><br />Starting with a simple discovery call to creating strategic action plans, we work as a team to design, develop, and deploy websites and mobile apps into the market.</h2>
                     </div>
                     <div class="column2" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white">
-                        <h2 class="hero__text">We provide you access to our collaborative platform where you can manage your projects, create tasks, and schedule meetings with your dedicated team. No more gambling with freelancers and agencies, saving you time and money.</h2>
+                        <h2 class="hero__text">We provide you access to our collaborative platform where you can manage your projects, create tasks, and schedule meetings with your dedicated team. <br /><br />No more gambling with freelancers and agencies, saving you time and money.</h2>
                     </div>
                 </div>
             </div>
@@ -1847,21 +1885,21 @@
     </section>
 
     <!--Our Work-->
-    <section class="section section--code" style="height:100vh; background-color:#dae1e7">
+    <section class="section section--code" style="min-height:100%; background-color:#dae1e7">
         <h1 class="hero__logo" data-aos="zoom-in" style="color:black">Our Work</h1>
         <div class="scene " style="height:100vh">
             <div class="carousel ">
                 <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Real Estate</div>
+                    <div style="font-size:30px; color:black">Property Management</div>
                     <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Education</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/school.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Fashion</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/fashion.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Photography</div>
@@ -1869,7 +1907,7 @@
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Travel</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/travel.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Sports</div>
@@ -1877,7 +1915,7 @@
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Entertainment</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/events.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Financial Services</div>
@@ -1887,7 +1925,7 @@
                     <div style="font-size:30px; color:black">Healthcare</div>
                     <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
-                <div class="carousel__cell" style="background-color:white">
+                <div class="carousel__cell" style="background-color: white">
                     <div style="font-size:30px; color:black">Consulting</div>
                     <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
@@ -1908,8 +1946,8 @@
                     <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
-                    <div style="font-size:30px; color:black">Retail</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <div style="font-size:30px; color:black">Salon</div>
+                    <img src="https://jamespeterjacob.github.io/phh/salon.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
             </div>
             <div class="carousel-options">
@@ -1999,7 +2037,7 @@
 
 
     <!--News-->
-    <section class="section section--code" style="min-height:100vh">
+    <section class="section section--code" style="min-height:100vh; background-color:#dae1e7">
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <h1 class="hero__logo" data-aos="zoom-in">News</h1>
@@ -2030,7 +2068,7 @@
         </div>
     </section>
 
-    <button class="open-button" onclick="openForm()"><p id="my-form-status">Email</p></button>
+    <button class="open-button" onclick="openForm()"><p id="my-form-status"><span>Contact</span></p></button>
 
     <div class="form-popup" id="myForm">
         <form id="my-form" action="https://formspree.io/mayqvaby" method="POST" class="form-container">
