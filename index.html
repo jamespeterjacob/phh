@@ -1796,8 +1796,39 @@
             }
         }
     </style>
+    <style>
+        .circle-chart__circle {
+            animation: circle-chart-fill 2s reverse;
+            transform: rotate(-90deg);
+            transform-origin: center;
+        }
+
+        @keyframes circle-chart-fill {
+            to {
+                stroke-dasharray: 0 100;
+            }
+        }
+
+        html {
+            font-family: sans-serif;
+        }
+    </style>
 </head>
 <body style="min-height:100%; background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)">
+
+    <div style="background-color:transparent; font-family:'Segoe UI'">
+        <ul>
+            <li>
+                <a class="active" href="https://jamespeterjacob.github.io/phh/index">
+                    <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width: 20px">
+                </a>
+            </li>
+            <!--<li><a href="https://jamespeterjacob.github.io/phh/about">About</a></li>-->
+            <li><a href="https://jamespeterjacob.github.io/phh/work">Work</a></li>
+            <li><a href="https://jamespeterjacob.github.io/phh/contact">Contact</a></li>
+        </ul>
+
+    </div>
 
     <div class="hero " data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero" style="background-image: url('https://jamespeterjacob.github.io/phh/bg.jpg');">
         <div class="overlay background"></div>
@@ -1809,7 +1840,7 @@
                 </span>
             </h2>
             <h2><span class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="1600" style="color:#ff4a27">WE DO IT IN 5</span></h2>
-           
+
         </div>
         <!--<div class="text-block1">
             <h5 style="font-size:50px" >Upgrade Your <bold>WEBSITE</bold><br /> Grow Your <bold>BUSINESS</bold></h5>
@@ -1833,19 +1864,7 @@
 
     </div>
 
-    <div style="background-color:transparent; font-family:'Segoe UI'">
-        <ul>
-            <li>
-                <a class="active" href="https://jamespeterjacob.github.io/phh/index">
-                    <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width: 20px">
-                </a>
-            </li>
-            <li><a href="https://jamespeterjacob.github.io/phh/about">About</a></li>
-            <li><a href="https://jamespeterjacob.github.io/phh/work">Work</a></li>
-            <li><a href="https://jamespeterjacob.github.io/phh/contact">Contact</a></li>
-        </ul>
 
-    </div>
 
     <!--About Us-->
     <section class="section section--code" style="min-height:100vh">
@@ -1861,13 +1880,13 @@
                     </div>
                     <div class="column" style="height:100%">
                         <div class="" data-aos="flip-up">
-                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                            <img src="https://jamespeterjacob.github.io/phh/PWA.svg" alt="Ceferin Web Solutions" style="max-width:40px">
                         </div>
                         <h2>Application Development</h2>
                     </div>
                     <div class="column" style="height:100%">
                         <div class="" data-aos="flip-up">
-                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                            <img src="https://jamespeterjacob.github.io/phh/DigitalMarketing.svg" alt="Ceferin Web Solutions" style="max-width:40px">
                         </div>
                         <h2>SEO & Digital Marketing</h2>
                     </div>
@@ -1891,7 +1910,7 @@
             <div class="carousel ">
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Property Management</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/realestate.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Education</div>
@@ -1903,7 +1922,7 @@
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Photography</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/photography.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Travel</div>
@@ -1911,39 +1930,39 @@
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Sports</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/sports.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Entertainment</div>
-                    <img src="https://jamespeterjacob.github.io/phh/events.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/entertainment.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Financial Services</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/finance.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Healthcare</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/healthcare.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color: white">
                     <div style="font-size:30px; color:black">Consulting</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/consulting.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Nonprofit</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/nonprofit.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Personal</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/personal.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Technology</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/technology.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Marketing</div>
-                    <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
+                    <img src="https://jamespeterjacob.github.io/phh/marketing.svg" alt="Ceferin Web Solutions" style="width:100%; height:auto">
                 </div>
                 <div class="carousel__cell" style="background-color:white">
                     <div style="font-size:30px; color:black">Salon</div>
@@ -1954,7 +1973,7 @@
                 <p>
                     <span>
                         <span class="previous-button" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800" style="color: #FF4081">
-                            <i class="chevron left"></i>
+                            <i class="chevron left" style="color:#ff4a27"></i>
                         </span>
                     </span>
 
@@ -1964,7 +1983,7 @@
                     </label>
                     <span>
                         <span class="next-button" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800" style="color: #FF4081">
-                            <i class="chevron right"></i>
+                            <i class="chevron right" style="color:#ff4a27"></i>
                         </span>
                     </span>
 
@@ -2003,14 +2022,30 @@
                 <div class="row">
                     <div class="column4" style="height:100%">
                         <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
-                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                            <!--<img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">-->
+                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                <g class="circle-chart__info" style="color:#74d4c0">
+                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">100%</text>
+                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                </g>
+                            </svg>
                         </div>
                         <h2>Performance</h2>
                         <p>Website speed, or website performance, refers to how quickly a browser is able to load fully functional webpages from a given site. Conversely, sites that load quickly will typically receive more traffic and have better conversion rates.</p>
                     </div>
                     <div class="column4" style="height:100%">
                         <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
-                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                            <!--<img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">-->
+                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                <g class="circle-chart__info" style="color:#74d4c0">
+                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">100%</text>
+                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                </g>
+                            </svg>
                         </div>
                         <h2>Best Practices</h2>
                         <p>Web design standards like navigation, color scheme, and utilization of social media and email marketing will ensure greater business success and optimization of leads.</p>
@@ -2018,14 +2053,30 @@
                     </div>
                     <div class="column4" style="height:100%">
                         <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
-                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                            <!--<img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">-->
+                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                <g class="circle-chart__info" style="color:#74d4c0">
+                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">100%</text>
+                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                </g>
+                            </svg>
                         </div>
                         <h2>Accessibility</h2>
                         <p>When websites and web tools are properly designed, people with disabilities can use them. Web accessibility depends on several components working together, including web technologies, web browsers and other "user agents", authoring tools, and websites. </p>
                     </div>
                     <div class="column4" style="height:100%">
                         <div class="" data-aos="flip-up" data-aos-duration="6000" style="background-color: transparent">
-                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
+                            <!--<img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">-->
+                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                <g class="circle-chart__info" style="color:#74d4c0">
+                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">100%</text>
+                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                </g>
+                            </svg>
                         </div>
                         <h2>SEO</h2>
                         <p>Search Engine Optimization is the practice of increasing both the quality and quantity of website traffic, as well as exposure to brand, through non-paid (aka "organic") search engine results.</p>
@@ -2041,27 +2092,28 @@
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <h1 class="hero__logo" data-aos="zoom-in">News</h1>
-                <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white"><span>For over ten years we have created memorable and effective designs. Designs that captivates. Designs that delivers results. Most importantly... Designs that helps our clients grow.</span></h2>
+                <!--<h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white"><span>For over ten years we have created memorable and effective designs. Designs that captivates. Designs that delivers results. Most importantly... Designs that helps our clients grow.</span></h2>-->
             </div>
         </div>
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="row" data-aos="fade-up" data-aos-duration="3000">
                 <div class="container" data-aos="fade-up" data-aos-duration="3000">
                     <div class="column2" data-aos="flip-down">
-                        <h2>Best Practices</h2>
-                        <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:75%;height:auto">
+                        <h2>A Top-Down Approach to Mobile Design</h2>
+                        <img src="https://jamespeterjacob.github.io/phh/mobileDesign.svg" alt="Mobile Design" style="width:63%;height:100%">
                         <div class="" data-aos="flip-down" data-aos-duration="3000" style="background-color: transparent">
-                            <p>Web design standards like navigation, color scheme, and utilization of social media and email marketing will ensure greater business success and optimization of leads.</p>
+                            <p>This approach means that extensive planning is involved in the creation of the final version. Every detail is carefully calculated and measured so your mobile site does not look like a tacked-on artifact. A bottom-up approach is exactly the opposite. Development occurs on a module-by-module basis, with not much planning or thought involved in the process along the way... <a href="">Read More</a></p>
                         </div>
                     </div>
                 </div>
+
                 <div class="container" data-aos="fade-up" data-aos-duration="3000">
                     <div class="column2" data-aos="flip-down">
-                        <h2>Best Practices</h2>
+                        <h2>Google’s Mobile-First Indexing</h2>
+                        <img src="https://jamespeterjacob.github.io/phh/mfi.svg" alt="Google's Mobile First Indexing" style="width:100%;height:100%">
                         <div class="" data-aos="flip-down" data-aos-duration="3000" style="background-color: transparent">
-                            <p>Web design standards like navigation, color scheme, and utilization of social media and email marketing will ensure greater business success and optimization of leads.</p>
+                            <p>At the end of 2017, Google announced that they would start slowly rolling out mobile-first indexing. By March 2018, Google stated that they were expanding the rollout and instructed websites to prepare. Google decides the readiness of a website for mobile-first indexing based on the parity of text, links, images, and videos, as well as structured data and other metadata... <a href="">Read More</a></p>
                         </div>
-                        <img src="https://jamespeterjacob.github.io/phh/castleton.svg" alt="Ceferin Web Solutions" style="width:75%;height:auto">
                     </div>
                 </div>
             </div>
