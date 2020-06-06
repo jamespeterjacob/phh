@@ -1458,6 +1458,17 @@
             transform-style: preserve-3d;
             transition: transform 1s;
         }
+        .col3img {
+            width: 300px;
+            height: Auto;
+            position:center;
+        }
+        .col2img {
+            width: 400px;
+            height: Auto;
+            position:center;
+        }
+
 
         .carousel__cell {
             position: absolute;
@@ -1475,6 +1486,7 @@
             text-align: center;
             transition: transform 1s, opacity 1s;
         }
+
 
             .carousel__cell:nth-child(9n+1) {
                 background: hsla( 0, 100%, 50%, 0.8);
@@ -1598,6 +1610,17 @@
                 color: white;*/
                 text-align: center;
                 transition: transform 1s, opacity 1s;
+            }
+            .col3img {
+                font-size:12px;
+                width: 100px;
+                height: Auto;
+                position:center;
+            }
+            .col2img {
+                width: 300px;
+                height: Auto;
+                position:center;
             }
         }
     </style>
@@ -1780,7 +1803,7 @@
         <ul>
             <li>
                 <a class="active" href="https://jamespeterjacob.github.io/phh/index">
-                    <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width: 20px">
+                    <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.svg" alt="Ceferin Web Solutions" style="max-width: 20px">
                 </a>
             </li>
             <li><a href="https://jamespeterjacob.github.io/phh/index">Home</a></li>
@@ -1788,26 +1811,26 @@
             <li><a href="https://jamespeterjacob.github.io/phh/contact">Contact</a></li>
         </ul>
     </div>
-    <div class="hero" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero" style="min-height:100vh">
-        <!--<div class="overlay background"></div>-->
+    <div class="hero" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero" style="min-height:100vh; background-image: url(https://jamespeterjacob.github.io/phh/fd.svg)">
+        <div class="overlay background"></div>
         <div class="hero-center">
             <h1 class="hero__logo" data-aos="zoom-in">Design Faster Collaborate Better</h1>
             <!--<div class="container">
                 <h2 class="hero__text hidden" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400"><span>WE'VE BROKEN FREE OF AGENCY VS. PRODUCTION SILOS AND HAVE DEVELOPED A PLACE WHERE BOTH CREATIVE AND ANALYTICAL MINDS CAN THRIVE.</span></h2>
             </div>-->
-            <div class="container">
+            <div class="container responsive">
                 <div class="row">
                     <div class="column" style="max-width:33.33%">
-                        <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
-                        <h4>Interactive Prototyping</h4>
+                        <h3 class="col3img">Interactive Prototyping</h3>
+                        <img src="https://jamespeterjacob.github.io/phh/prototype.svg" class="col3img"  alt="Interactive Prototyping" >
                     </div>
                     <div class="column" style="max-width:33.33%">
-                        <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
-                        <h4>Painless Collaboration</h4>
+                        <h3 class="col3img">Painless Collaboration</h3>
+                        <img src="https://jamespeterjacob.github.io/phh/collaboration.svg" class="col3img" alt="Painless Collaboration" >
                     </div>
                     <div class="column" style="max-width:33.33%">
-                        <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
-                        <h4>Scalable Systems</h4>
+                        <h3 class="col3img">Scalable Systems</h3>
+                        <img src="https://jamespeterjacob.github.io/phh/scalable.svg" class="col3img" alt="Scalable Systems" >
                     </div>
                 </div>
             </div>
@@ -1835,18 +1858,14 @@
             <div class="container">
                 <div class="row">
                     <div class="column2">
-                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
-                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
-                        </div>
-                        <h2>WEBSITE DESIGN</h2>
+                        <img src="https://jamespeterjacob.github.io/phh/rd.svg" alt="Responsive Website Design" class="col2img" >
+                        <h2>Responsive WEBSITE DESIGN</h2>
                         <p>With a single code-base Responsive websites deliver stronger SEO, faster load times, one-stop analytics, enhanced site performance, improved usability, and more targeted messaging. And thanks to a single source administrative platform all updates and are made at the same time.</p>
                         <p>Building and maintaining a site for laptops, tablets and mobile devices can be time-consuming and just plain time-wasting. With industry-approved practices in creating the best Responsive websites, we get your site up and running once. Then it magically conforms to the various devices that pull it up.</p>
                     </div>
 
                     <div class="column2">
-                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
-                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width: 40px">
-                        </div>
+                        <img src="https://jamespeterjacob.github.io/phh/gd.svg" alt="Graphic Design" class="col2img">
                         <h2>GRAPHIC DESIGN</h2>
                         <p>You and I can make magic. From scroll-stopping content to impeccable production-ready work, our blend of art and science is unbeatable. Tap our seasoned writers and designers to first connect with your customers’ emotional needs and then sell product benefits. Creative is all about connecting, making a mark and eliciting a response.</p>
                         <p>We're all about telling your story. We do that through compelling, professional design of every day materials. Business stationery, email templates, postcards, mailers, tri-fold brochures, posters, signage, power points, exhibit booths, packaging, annual reports, infographics, digital ads and so much more. Get your stuff designed. 86 the attitude.</p>
@@ -1854,18 +1873,14 @@
                 </div>
                 <div class="row">
                     <div class="column2">
-                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
-                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
-                        </div>
+                        <img src="https://jamespeterjacob.github.io/phh/cw.svg" alt="Copywriting" class="col2img">
                         <h2>COPYWRITING</h2>
                         <p>There’s nothing like a great headline. Match it with a complimentary hero shot that makes your viewers think. Catch their attention. Clients love our copywriting services and photography team because we find just the right match for your industry, style and tone.</p>
                         <p>Our writers take any industry, gain a deep understanding of the work and the readers. From there, we translate your message into language that resonates with them. Naturally, we make the most of your words with clear, concise and convincing messaging that motivates readers to act.</p>
                     </div>
 
                     <div class="column2">
-                        <div class="" data-aos="flip-up" data-aos-duration="6000" style="        background-color: transparent">
-                            <img src="https://jamespeterjacob.github.io/phh/OrangeLogo.png" alt="Ceferin Web Solutions" style="max-width:40px">
-                        </div>
+                        <img src="https://jamespeterjacob.github.io/phh/cms.svg" alt="Content Management System" class="col2img">
                         <h2>CMS</h2>
                         <p>A Content Management System (CMS) allows you to control and administer your website in-house. Our custom CMS solutions give you full control. Now, you have the freedom to keep your site updated-to-the-minute. There’s no need to wait on a developer to shoehorn your updates into their schedule.</p>
                         <p>Our custom CMS solutions are built to scale. You can create a manageable site, then your website can grow as your business grows. There's no limit to the number of pages that can be contained and managed in the system or channels through which content is fed.</p>
