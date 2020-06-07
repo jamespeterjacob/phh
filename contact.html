@@ -11,8 +11,8 @@
     </script>
     <meta charset="utf-8">
     <title>Ceferin Web Solutions | +91 98840 41138</title>
-    <meta name="description" content="AOS - Animate On Scroll library using CSS3">
-    <meta name="keywords" content="AOS, animate on scroll, css3 scroll animations, simple scroll animations">
+    <meta name="description" content="Mobile Responsive Website, Progressive Web Applications, CMS, Copywriting, Graphic Design">
+    <meta name="keywords" content="Mobile Responsive Website, Progressive Web Applications, CMS, Copywriting, Graphic Design">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://www.ceferin.com/favicon.svg" rel="shortcut icon" type="image/x-icon" />
     <style>
@@ -1392,6 +1392,14 @@
             }
     </style>
     <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            background: transparent;
+            width: 100%;
+            height: 50px;
+        }
+
         ul {
             list-style-type: none;
             margin: 0;
@@ -1459,6 +1467,19 @@
             transition: transform 1s;
         }
 
+        .col3img {
+            width: 300px;
+            height: Auto;
+            position: center;
+        }
+
+        .col2img {
+            width: 400px;
+            height: Auto;
+            position: center;
+        }
+
+
         .carousel__cell {
             position: absolute;
             /*width: 600px;
@@ -1475,6 +1496,7 @@
             text-align: center;
             transition: transform 1s, opacity 1s;
         }
+
 
             .carousel__cell:nth-child(9n+1) {
                 background: hsla( 0, 100%, 50%, 0.8);
@@ -1560,6 +1582,9 @@
 
         @media screen and (max-width: 600px) {
 
+            .hero__logo {
+                font-size:50px;
+            }
             .scene {
                 /*border: 1px solid #CCC;*/
                 /*margin: 40px 0;
@@ -1598,6 +1623,19 @@
                 color: white;*/
                 text-align: center;
                 transition: transform 1s, opacity 1s;
+            }
+
+            .col3img {
+                font-size: 12px;
+                width: 100px;
+                height: Auto;
+                position: center;
+            }
+
+            .col2img {
+                width: 300px;
+                height: Auto;
+                position: center;
             }
         }
     </style>
@@ -1777,7 +1815,7 @@
 </head>
 <body style="height: 100%; background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); font-family:'Segoe UI'">
 
-    <div style="background-color:transparent; font-family:'Segoe UI'">
+    <div class="navbar" style="font-family: 'Segoe UI'; z-index: 3">
         <ul>
             <li>
                 <a class="active" href="https://jamespeterjacob.github.io/phh/index">
@@ -1791,58 +1829,40 @@
         </ul>
     </div>
 
-    <div class="hero " data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero" style="background-image: url('https://jamespeterjacob.github.io/phh/bg.jpg');">
+    <div class="hero " style="height: 100vh;background-image: url(https://jamespeterjacob.github.io/phh/bg.svg)" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero">
         <div class="overlay background"></div>
         <div class="hero-center">
             <h1 class="hero__logo" data-aos="zoom-in">Ceferin Web Solutions</h1>
-            <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white"></h2>
-            <p style="font-weight:900">info@ceferin.com</p>
-            <p>+91 98840 41138</p>
-            <p>Annapoorna Nagar 1st St, Ponniammanmedu, Chennai, Tamil Nadu 600110</p>
+            <div class="row" style="top:50%">
+                <div class="column2">
+                    <p style="font-weight:900">info@ceferin.com</p>
+                    <p>+91 98840 41138</p>
+                    <p>Annapoorna Nagar 1st St, Ponniammanmedu, Chennai, Tamil Nadu 600110</p>
+                    <span style="font-size:12px">© Ceferin Web Solutions, 2020</span>
+                </div>
+                <div class="column2">
+                    <div class="" id="myForm">
+                        <form id="my-form" data-email="jamespeterjacob@gmail.com" action="https://script.google.com/macros/s/AKfycbwg2rSpatHAObpLMoc5frNWwSkWB6taJCzwwo8h/exec" method="POST" class="">
+                            <!--<span style="color:black; font-size:30px; font-weight:300; float:right" class="close" onclick="closeForm()">&times;</span>-->
+                            <!--<p id="my-form-status"></p>-->
+                            <input type="email" name="email" placeholder="Email Address" style="width:100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" />
+                            <input type="number" name="phone" placeholder="Phone" style="width:100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" />
+                            <textarea type="text" placeholder="Your Message" name="message" style="width:100%; height:100px; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"></textarea>
+                            <button type="submit" id="my-form-button" style="width: 50%; background-color: #2aaff0; color: white; padding: 14px 20px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
+                        </form>
+                    </div>
+                    <p id="my-form-status" style="font-size: 50px;color: #ff4a27"></p>
+                </div>
+            </div>
         </div>
         <div class="item"></div>
         <div class="circle" style="animation-delay: 0s"></div>
         <div class="circle" style="animation-delay: 1s"></div>
         <div class="circle" style="animation-delay: 2s"></div>
         <div class="circle" style="animation-delay: 3s"></div>
-
-        <div class="container">
-            <p id="my-form-status" style="font-size: 50px;color: #ff4a27"></p>
-        </div>
-
     </div>
 
     
-
-    <button class="open-button" onclick="openForm()"><p><span>Contact</span></p></button>
-
-    <!--<div class="form-popup" id="myForm">
-        <form id="my-form" action="https://formspree.io/mayqvaby" method="POST" class="form-container">
-            <span style="color:black; font-size:30px; font-weight:300; float:right" class="close" onclick="closeForm()">&times;</span>
-            <p id="my-form-status"></p>
-            <input type="email" name="email" placeholder="Email Address" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" />
-            <input type="number" name="phone" placeholder="Phone" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" />
-
-            <textarea type="text" placeholder="Your Message" name="message" style="width: 100%; height:300px; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"></textarea>
-            <button type="submit" id="my-form-button" style="width: 100%; background-color: #2aaff0; color: white; padding: 14px 20px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
-        </form>
-    </div>-->
-
-    <div class="form-popup" id="myForm">
-        <form id="my-form" data-email="jamespeterjacob@gmail.com" action="https://script.google.com/macros/s/AKfycbwg2rSpatHAObpLMoc5frNWwSkWB6taJCzwwo8h/exec" method="POST" class="form-container">
-            <span style="color:black; font-size:30px; font-weight:300; float:right" class="close" onclick="closeForm()">&times;</span>
-            <!--<p id="my-form-status"></p>-->
-            <input type="email" name="email" placeholder="Email Address" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" />
-            <input type="number" name="phone" placeholder="Phone" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" />
-
-            <textarea type="text" placeholder="Your Message" name="message" style="width: 100%; height:300px; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"></textarea>
-            <button type="submit" id="my-form-button" style="width: 100%; background-color: #2aaff0; color: white; padding: 14px 20px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
-        </form>
-    </div>
-
-
-
-
 
     <script>
         function openForm() {
