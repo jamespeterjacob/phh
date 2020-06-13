@@ -1768,17 +1768,18 @@
     </style>
     <style>
         .open-button {
-            background-color: #ff4a27;
+            background-color: deepskyblue;
             color: Black;
             padding: 16px 20px;
             border: none;
             cursor: pointer;
             opacity: 0.8;
-            position: fixed;
-            bottom: 23px;
-            right: 28px;
-            width: 75px;
-            border-radius: 50%;
+            position: center;
+            vertical-align:middle;
+            /*bottom: 23px;
+            right: 28px;*/
+            width: 25%;
+            /*border-radius: 50%;*/
         }
 
         /* The popup form - hidden by default */
@@ -1894,6 +1895,11 @@
                 height: auto;
                 background-color: transparent;
             }
+            .line2{
+                font-size:18px;
+            }
+            
+
         }
     </style>
     <style>
@@ -1955,6 +1961,65 @@
             font-family: sans-serif;
         }
     </style>
+    <style>
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+        }
+
+        .flip-card-innerSLA {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);*/
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card:hover .flip-card-innerSLA {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        .center {
+            margin: auto;
+            width: 100%;
+            padding: 0px;
+        }
+    </style>
 </head>
 <body style="min-height:100%; background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)">
 
@@ -1965,27 +2030,28 @@
                     <img src="https://www.ceferin.com/OrangeLogo.svg" alt="Ceferin Web Solutions" style="width:25px" />
                 </a>
             </li>
-            <!--<li><a href="https://jamespeterjacob.github.io/phh/about">About</a></li>-->
             <li><a href="https://jamespeterjacob.github.io/phh/work">Work</a></li>
             <li><a href="https://jamespeterjacob.github.io/phh/contact">Contact</a></li>
         </ul>
 
     </div>
 
+    
+
     <div class="hero " data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero" style="background-image: url(https://jamespeterjacob.github.io/phh/bg.svg)">
         <div class="overlay background"></div>
         <div class="hero-center">
             <h1 class="hero__logo" data-aos="zoom-in">Functional Web Solutions</h1>
             <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
-                <span>
+                <span class="line2">
                     IT TAKES 7 SECONDS TO MAKE AN IMPRESSION
                 </span>
             </h2>
-            <h2><span class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="1600" style="color:#ff4a27">WE DO IT IN 5</span></h2>
+            <h2 class="hero__text"><span class="line2" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="1600" style="color:white">WE DO IT IN 5</span></h2>
 
         </div>
         <span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="3500">
-            About Us <br />
+            <img src="https://www.ceferin.com/ceferinBlack.svg" style="width:200px; height:auto" /> <br />
             <i class="chevron bottom" style="color:#ff4a27"></i>
         </span>
         <div class="item"></div>
@@ -2000,44 +2066,76 @@
     <!--About Us-->
     <section class="section section--code" style="min-height:100vh">
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
-            <div class="container">
-                <h1 class="hero__logo" data-aos="zoom-in"><span>Design Agency That Delivers Results</span></h1>
-                <div class="row" style="max-height:400px">
+            <div class="container" style="min-height:100%">
+                <h1 class="hero__logo" data-aos="zoom-in"><span>Solutions That Deliver Results</span></h1>
+                <div class="row" style="min-height:100%">
                     <div class="column">
                         <div class="" data-aos="flip-up">
-                            <h2>Responsive Website Design</h2>
-                            <img src="https://www.ceferin.com/md.svg" alt="Responsive Website Design" style="width:300px" />
+                            <div class="flip-card center">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front" style="background-color: transparent">
+                                        <h2 style="font-size: 40px;color:rgba(0, 0, 0, 0.5)"><span>DESIGN</span></h2>
+                                        <img src="https://www.ceferin.com/md.svg" alt="Responsive Website Design" style="width:200px">
+                                    </div>
+                                    <div class="flip-card-back center">
+                                        <h2 style="font-size:40px">Responsive Websites</h2>
+                                        <h3 style="font-size: 25px;color:rgba(0, 0, 0, 0.5)">Increased Visibility on Search Engines</h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="column">
                         <div class="" data-aos="flip-up">
-                            <h2>Application Development</h2>
-                            <img src="https://www.ceferin.com/appDevelopment.svg" alt="Application Development" style="width:300px" />
+                            <div class="flip-card center">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front" style="background-color:transparent">
+                                        <h2 style="font-size: 40px;color: rgba(0, 0, 0, 0.5)"><span>DEVELOP</span></h2>
+                                        <img src="https://www.ceferin.com/appDevelopment.svg" alt="Custom Application Development" style="width:200px">
+                                    </div>
+                                    <div class="flip-card-back center">
+                                        <h2 style="font-size:40px">Custom Web Applications</h2>
+                                        <h3 style="font-size: 25px;color: rgba(0, 0, 0, 0.5)">Corporate Branded Digital Product</h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                     <div class="column">
                         <div class="" data-aos="flip-up">
-                            <h2>SEO & Digital Marketing</h2>
-                            <img src="https://www.ceferin.com/dm.svg" alt="Digital Marketing" style="width:300px" />
+                            <div class="flip-card center">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front" style="background-color:transparent">
+                                        <h2 style="font-size: 40px;color: rgba(0, 0, 0, 0.5)"><span>PERFORM</span></h2>
+                                        <img src="https://www.ceferin.com/dm.svg" alt="Digital Marketing" style="width:200px">
+                                    </div>
+                                    <div class="flip-card-back center">
+                                        <h2 style="font-size:40px">SEO & Digital Marketing</h2>
+                                        <h3 style="font-size: 25px;color: rgba(0, 0, 0, 0.5)">Increased Corporate Presence Online</h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="column2" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white">
-                        <h2 class="hero__text">From design & development to online marketing campaigns, our smart solutions help brands and businesses increase <bold style="color:#ff4a27">Visibility</bold>, <bold style="color:#ff4a27">Engagement</bold>, and <bold style="color:#ff4a27">Revenue</bold>. <br /><br />Starting with a simple discovery call to creating strategic action plans, we work as a team to design, develop, and deploy websites and mobile apps into the market.</h2>
-                    </div>
-                    <div class="column2" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white">
-                        <h2 class="hero__text">We provide you access to our collaborative platform where you can manage your projects, create tasks, and schedule meetings with your dedicated team. <br /><br />No more gambling with freelancers and agencies, saving you time and money.</h2>
                     </div>
                 </div>
-
             </div>
         </div>
+        <br />
+        <br />
+        <br />
+        <div class="container" style="min-height:200px">
+            <div class="row" style="min-height:200px">
+                <!--<button class="open-button" style="background-color: #FF4a27;font-size: 30px;color: black">Enquire Now</button>-->
+                <a id="about" href="https://www.ceferin.com/contact" class="open-button" style="background-color: #FF4a27;font-size: 30px;color: black">Enquire Now</a>
+            </div>
+        </div>
+        
     </section>
 
     <!--Our Work-->
     <section class="section section--code" style="min-height:100%; background-color:white">
         <h1 class="hero__logo" data-aos="zoom-in" style="color:black">Our Work</h1>
-        <div class="scene " style="height:100vh">
+        <div class="scene " style="min-height:100%">
             <div class="carousel ">
                 <div class="carousel__cell" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)">
                     <div class="carimg" style="font-size:30px; color:black">
@@ -2167,7 +2265,12 @@
                 </p>
             </div>
         </div>
-
+        <br />
+        <div class="container" style="min-height:100px">
+            <!--<button class="open-button" style="background-color: #FF4a27;font-size: 30px;color: black">Enquire Now</button>-->
+            <a id="work" href="https://www.ceferin.com/contact" class="open-button" style="background-color: #FF4a27;font-size: 30px;color: black">Enquire Now</a>
+        </div>
+        
     </section>
 
     <!--Our Guarantee-->
@@ -2175,71 +2278,117 @@
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <h1 class="hero__logo" data-aos="zoom-in">Our SLA</h1>
-                <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white"><span>For over ten years we have created memorable and effective designs. Designs that captivates. Designs that delivers results. Most importantly... Designs that helps our clients grow.</span></h2>
+                <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white"><span>For over ten years we have created memorable and effective designs. Designs that captivates. Designs that delivers results. Most importantly... Designs that help our clients grow.</span></h2>
             </div>
         </div>
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <div class="row">
                     <div class="column4" style="height:100%">
-                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
-                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                <g class="circle-chart__info" style="color:#74d4c0">
-                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">100%</text>
-                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
-                                </g>
-                            </svg>
+                        <div class="" data-aos="flip-up">
+                            <div class="flip-card center" style="border:none">
+                                <div class="flip-card-innerSLA">
+                                    <div class="flip-card-front" style="background-color: transparent">
+                                        <h2>Performance</h2>
+                                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
+                                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="90,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                                <g class="circle-chart__info" style="color:#74d4c0">
+                                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">90%</text>
+                                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flip-card-back center">
+                                        <p class="hero__text" style="padding:10px">Website speed, or website performance, refers to how quickly a browser is able to load fully functional webpages from a given site. Conversely, sites that load quickly will typically receive more traffic and have better conversion rates.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h2>Performance</h2>
-                        <p>Website speed, or website performance, refers to how quickly a browser is able to load fully functional webpages from a given site. Conversely, sites that load quickly will typically receive more traffic and have better conversion rates.</p>
+                        
+                        
                     </div>
                     <div class="column4" style="height:100%">
                         <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
-                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                <g class="circle-chart__info" style="color:#74d4c0">
-                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">100%</text>
-                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
-                                </g>
-                            </svg>
+                            <div class="flip-card center" style="border:none">
+                                <div class="flip-card-innerSLA">
+                                    <div class="flip-card-front" style="background-color: transparent">
+                                        <h2>Best Practices</h2>
+                                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
+                                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                                <g class="circle-chart__info" style="color:#74d4c0">
+                                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">100%</text>
+                                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flip-card-back center">
+                                        <p class="hero__text" style="padding:10px">Web design standards like navigation, color scheme, and utilization of social media and email marketing will ensure greater business success and optimization of leads.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h2>Best Practices</h2>
-                        <p>Web design standards like navigation, color scheme, and utilization of social media and email marketing will ensure greater business success and optimization of leads.</p>
-
                     </div>
                     <div class="column4" style="height:100%">
                         <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
-                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                <g class="circle-chart__info" style="color:#74d4c0">
-                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">100%</text>
-                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
-                                </g>
-                            </svg>
+                            <div class="flip-card center" style="border:none">
+                                <div class="flip-card-innerSLA">
+                                    <div class="flip-card-front" style="background-color: transparent">
+                                        <h2>Accessibility</h2>
+                                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
+                                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                                <g class="circle-chart__info" style="color:#74d4c0">
+                                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">100%</text>
+                                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flip-card-back center">
+                                        <p class="hero__text" style="padding:10px">When websites and web tools are properly designed, people with disabilities can use them. Web accessibility depends on several components working together, including web technologies, web browsers and other "user agents", authoring tools, and websites.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h2>Accessibility</h2>
-                        <p>When websites and web tools are properly designed, people with disabilities can use them. Web accessibility depends on several components working together, including web technologies, web browsers and other "user agents", authoring tools, and websites. </p>
                     </div>
                     <div class="column4" style="height:100%">
                         <div class="" data-aos="flip-up" data-aos-duration="6000" style="background-color: transparent">
-                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                <g class="circle-chart__info" style="color:#74d4c0">
-                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">100%</text>
-                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
-                                </g>
-                            </svg>
+                            <div class="flip-card center" style="border:none">
+                                <div class="flip-card-innerSLA">
+                                    <div class="flip-card-front" style="background-color: transparent">
+                                        <h2>SEO</h2>
+                                        <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
+                                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                                <circle class="circle-chart__circle" stroke="#74d4c0" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                                <g class="circle-chart__info" style="color:#74d4c0">
+                                                    <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#74d4c0">100%</text>
+                                                    <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flip-card-back center" style="vertical-align:middle">
+                                        <p class="hero__text" style="padding:10px; vertical-align:middle"><span>Search Engine Optimization is the practice of increasing both the quality and quantity of website traffic, as well as exposure to brand, through non-paid (aka "organic") search engine results.</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h2>SEO</h2>
-                        <p>Search Engine Optimization is the practice of increasing both the quality and quantity of website traffic, as well as exposure to brand, through non-paid (aka "organic") search engine results.</p>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="container" style="min-height:100px">
+            <!--<button class="open-button" style="background-color: #FF4a27;font-size: 30px;color: black">Enquire Now</button>-->
+            <a id="guarantee" href="https://www.ceferin.com/contact" class="open-button" style="background-color: #FF4a27;font-size: 30px;color: black">Enquire Now</a>
         </div>
     </section>
 
@@ -2254,28 +2403,39 @@
         </div>
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="row" data-aos="fade-up" data-aos-duration="3000">
-                <div class="container" data-aos="fade-up" data-aos-duration="3000">
-                    <a href="https://www.ceferin.com/Why%20Google%20Loves%20Good%20Websites" style="color:black">
-                        <div class="column2" data-aos="flip-down">
-                            <h2>Why Google Loves Good Websites</h2>
-                            <div style="min-width:300px;min-height:200px">
-                                <img src="https://www.ceferin.com/glgw.svg" alt="Google Loves Good Websites" />
+                <div class="column2">
+                    <div class="container" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="flip-card center" style="height:100%">
+                            <h2 style="font-size: 40px;color:rgba(0, 0, 0, 0.5); padding:15px"><span>Why Google Loves Good Websites?</span></h2>
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front" style="background-color: transparent">
+                                    <img src="https://www.ceferin.com/glgw.svg" alt="Why Google Loves Good Websites" style="width:300px">
+                                </div>
+                                <div class="flip-card-back center">
+                                    <p class="hero__text" style="padding: 10px;font-size: 20px;color:rgba(0, 0, 0, 0.5)">Google prefers pages that are “mobile friendly,” which means they look good and are easy to navigate on mobile devices. A new update to Google's algorithm came out in May that boosted mobile friendly pages even higher in the rankings.</p>
+                                    <a id="GLGW" href="https://www.ceferin.com/Why%20Google%20Loves%20Good%20Websites" class="open-button" style="color:black">Read More...</a>
+                                </div>
                             </div>
-                            <p>Google prefers pages that are “mobile friendly,” which means they look good and are easy to navigate on mobile devices. A new update to Google's algorithm came out in May that boosted mobile friendly pages even higher in the rankings. Read More...</p>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="container" data-aos="fade-up" data-aos-duration="3000">
-                    <a href="https://www.ceferin.com/Why%20Upgrade%20Your%20Website.html" style="color:black">
-                        <div class="column2" data-aos="flip-down">
-                            <h2>Google’s Mobile-First Indexing</h2>
-                            <div style="min-width:300px;min-height:200px">
-                                <img src="https://www.ceferin.com/googleIndexing.svg" alt="Mobile-First Indexing" />
+                <div class="column2">
+                    <div class="container" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="flip-card center" style="height:100%">
+                            <h2 style="font-size: 40px;color:rgba(0, 0, 0, 0.5); padding:15px"><span>Why Upgrade Your Website?</span></h2>
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front" style="background-color: transparent">
+                                    <img src="https://www.ceferin.com/googleIndexing.svg" alt="Mobile-First Indexing" style="width:300px">
+                                </div>
+                                <div class="flip-card-back center">
+                                    <p class="hero__text" style="padding: 10px;font-size: 20px;color:rgba(0, 0, 0, 0.5)">At the end of 2017, Google announced that they would start slowly rolling out mobile-first indexing. By March 2018, Google stated that they were expanding the rollout and instructed websites to prepare. Google decides the readiness of a website for mobile-first indexing based on the parity of text, links, images, and videos, as well as structured data and other metadata.</p>
+                                    <a id="GMFI" href="https://www.ceferin.com/Why%20Upgrade%20Your%20Website.html" class="open-button" style="color:black">Read More...</a>
+                                </div>
                             </div>
-                            <p>At the end of 2017, Google announced that they would start slowly rolling out mobile-first indexing. By March 2018, Google stated that they were expanding the rollout and instructed websites to prepare. Google decides the readiness of a website for mobile-first indexing based on the parity of text, links, images, and videos, as well as structured data and other metadata... <a href="https://www.ceferin.com/MobileFirstIndexing" style="color:black">Read More</a></p>
                         </div>
-                    </a>
+                    </div>
                 </div>
+               
             </div>
         </div>
     </section>
@@ -2310,7 +2470,7 @@
             })
         })
     </script>
-  
+
     <script>
         AOS.init({
             easing: 'ease-out-back',
