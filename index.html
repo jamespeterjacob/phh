@@ -2510,7 +2510,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
+                navigator.serviceWorker.register('https://www.ceferin.com/service-worker.js')
                     .then((reg) => {
                         console.log('Service worker registered.', reg);
                     });
@@ -2551,27 +2551,7 @@
         // CODELAB: Add list of files to cache here.
         const FILES_TO_CACHE = [
             '/',
-            '/index.html',
-            '/scripts/app.js',
-            '/scripts/install.js',
-            '/scripts/luxon-1.11.4.js',
-            '/styles/inline.css',
-            '/images/add.svg',
-            '/images/clear-day.svg',
-            '/images/clear-night.svg',
-            '/images/cloudy.svg',
-            '/images/fog.svg',
-            '/images/hail.svg',
-            '/images/install.svg',
-            '/images/partly-cloudy-day.svg',
-            '/images/partly-cloudy-night.svg',
-            '/images/rain.svg',
-            '/images/refresh.svg',
-            '/images/sleet.svg',
-            '/images/snow.svg',
-            '/images/thunderstorm.svg',
-            '/images/tornado.svg',
-            '/images/wind.svg',
+            'https:www.ceferin.com/index.html'
         ];
     </script>
     <script>
