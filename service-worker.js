@@ -12,17 +12,33 @@ self.addEventListener('fetch', event => {
     }
 });
 
-const cacheName = 'pwa-conf-v1';
-const staticAssets = [
-    './',
-    './index.html',
-    './app.js',
-    './styles.css'
+var cache_name = 'ceferin-cache';
+var cached_urls = [
+    'offline.html',
+    'fourohfour.html',
+    'account.html',
+    'altontowers.html',
+    'bet365.html',
+    'booking-altonTowers.html',
+    'booking-manchesterAirport.html',
+    'booking-northStaffsHotel.html',
+    'bookings.html',
+    'emmabridgewater.html',
+    'freeportTalke.html',
+    'index.html',
+    'intupotteries.html',
+    'search.html',
+    'trenthamEstate.html',
+    'style.css'
 ];
 
-self.addEventListener('install', async event => {
-    const cache = await caches.open(cacheName);
-    await cache.addAll(staticAssets);
+self.addEventListener('install', function (event) {
+    event.waitUntil(
+        cache.open(cache_name)
+            .then(function (cache) {
+                return cache.addAll(cached_urls);
+            })
+    );
 });
 
 self.addEventListener('fetch', event => {
