@@ -2517,40 +2517,40 @@
             });
         }
         // CODELAB: Add code to get weather forecast from the caches object.
-        if (!('caches' in window)) {
-            return null;
-        }
-        const url = 'https://www.ceferin.com/index.html';
-        return caches.match(url)
-            .then((response) => {
-                if (response) {
-                    return response.json();
-                }
-                return null;
-            })
-            .catch((err) => {
-                console.error('Error getting data from cache', err);
-                return null;
-            });
+        //if (!('caches' in window)) {
+        //    return null;
+        //}
+        //const url = 'https://www.ceferin.com/index.html';
+        //return caches.match(url)
+        //    .then((response) => {
+        //        if (response) {
+        //            return response.json();
+        //        }
+        //        return null;
+        //    })
+        //    .catch((err) => {
+        //        console.error('Error getting data from cache', err);
+        //        return null;
+        //    });
         // CODELAB: Add code to call getForecastFromCache.
-        getForecastFromCache(location.geo)
-            .then((forecast) => {
-                renderForecast(card, forecast);
-            });
+        //getForecastFromCache(location.geo)
+        //    .then((forecast) => {
+        //        renderForecast(card, forecast);
+        //    });
 
         // If the data on the element is newer, skip the update.
-        if (lastUpdated >= data.currently.time) {
-            return;
-        }
+        //if (lastUpdated >= data.currently.time) {
+        //    return;
+        //}
 
-        // CODELAB: Update cache names any time any of the cached files change.
-        const CACHE_NAME = 'static-cache-v2';
-        const DATA_CACHE_NAME = 'data-cache-v1';
-        // CODELAB: Add list of files to cache here.
-        const FILES_TO_CACHE = [
-            '/',
-            'https:www.ceferin.com/index.html'
-        ];
+        //// CODELAB: Update cache names any time any of the cached files change.
+        //const CACHE_NAME = 'static-cache-v2';
+        //const DATA_CACHE_NAME = 'data-cache-v1';
+        //// CODELAB: Add list of files to cache here.
+        //const FILES_TO_CACHE = [
+        //    '/',
+        //    'https:www.ceferin.com/index.html'
+        //];
     </script>
     <script>
         let deferredPrompt;
