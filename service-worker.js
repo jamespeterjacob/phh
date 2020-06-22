@@ -1,17 +1,3 @@
-self.addEventListener('install', async event => {
-    console.log('install event')
-});
-
-self.addEventListener('fetch', event => {
-    const req = event.request;
-
-    if (/.*(json)$/.test(req.url)) {
-        event.respondWith(networkFirst(req));
-    } else {
-        event.respondWith(cacheFirst(req));
-    }
-});
-
 var cache_name = 'ceferin-cache';
 var cached_urls = [
     'offline.html',
