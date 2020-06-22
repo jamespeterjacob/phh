@@ -1,4 +1,4 @@
-<script>
+
     let deferredPrompt;
 
     window.addEventListener('beforeinstallprompt', function(event) {
@@ -25,5 +25,3 @@
           deferredPrompt = null;
         });
     });
-
-    </script>
