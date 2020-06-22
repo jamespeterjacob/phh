@@ -1646,11 +1646,11 @@
             border: none;
             cursor: pointer;
             opacity: 0.8;
-            position: fixed;
+            /*position: fixed;*/
             bottom: 23px;
             right: 28px;
             width: 75px;
-            border-radius: 50%;
+            /*border-radius: 50%;*/
         }
 
         /* The popup form - hidden by default */
@@ -1859,6 +1859,67 @@
             font-family: sans-serif;
         }
     </style>
+    <style>
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+        }
+
+        .flip-card-innerSLA {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);*/
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card:hover .flip-card-innerSLA {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .center {
+            margin: auto;
+            width: 100%;
+            padding: 0px;
+        }
+    </style>
 </head>
 <body style="min-height:100%; background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)">
 
@@ -1960,17 +2021,100 @@
                         <p></p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="container">
-                    <hr />
-                    <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800" style="color:white">Therefore, do not use Google’s mobile usability test, or the mobility usability report in Search Console as a signal that your website is ready for mobile-first indexing. In summary, mobile-friendliness and mobile-responsive layouts are not mandatory for mobile-first indexing. Since pages without mobile versions still work on mobile device, they are eligible for indexing.</h2>
-                    <hr />
+    <section class="section section--code" style="min-height: 100vh;background-color: #3565b3">
+        <div class="container" data-aos="fade-up" data-aos-duration="3000">
+            <div class="container">
+                <blockquote style="color:white; font-style:italic; font-size:20px">"Therefore, do not use Google’s mobile usability test, or the mobility usability report in Search Console as a signal that your website is ready for mobile-first indexing. In summary, mobile-friendliness and mobile-responsive layouts are not mandatory for mobile-first indexing. Since pages without mobile versions still work on mobile device, they are eligible for indexing."</blockquote>
+                <div class="row">
+                    <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800" style="color:white; font-size:30px">HOW WE RESOLVE PROBLEMS</h2>
+                    <br />
+                    <div class="column4">
+                        <div class=""  data-aos="flip-up">
+                            <h5 style="font-size: 20px;color:white"><span>WEBSITE <br />AUDIT</span></h5>
+                            <img src="https://www.ceferin.com/googlelighthouse.svg" alt="Website Audit" style="width:200px">
+                        </div>
+                    </div>
+                    <div class="column4">
+                        <div class="" data-aos="flip-up">
+                            <h5 style="font-size: 20px;color: white"><span>IDENTIFY OPPORTUNITIES</span></h5>
+                            <img src="https://www.ceferin.com/opportunity.svg" alt="Identify Opportunities" style="width:200px">
+                        </div>
+                    </div>
+                    <div class="column4">
+                        <div class=""  data-aos="flip-up">
+                            <h5 style="font-size: 20px;color:White"><span>IMPLEMENT CHANGE</span></h5>
+                            <img src="https://www.ceferin.com/change.svg" alt="Implement Change" style="width:200px">
+
+                        </div>
+                    </div>
+                    <div class="column4">
+                        <div class=""  data-aos="flip-up">
+                            <h5 style="font-size: 20px;color:White"><span>REPORT &<br /> REPEAT</span></h5>
+                            <img src="https://www.ceferin.com/report.svg" alt="Report & Repeat" style="width:200px">
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="container" style="min-height:200px">
+            <div class="row" style="min-height:200px">
+                <!--<button class="open-button" style="background-color: #FF4a27;font-size: 30px;color: black">Enquire Now</button>-->
+                <a id="about" href="https://www.ceferin.com/contact" class="open-button" style="background-color: #FF4a27;font-size: 30px;color: black">Contact Us</a>
             </div>
         </div>
     </section>
 
     <!--News-->
+    <section class="section section--code" style="min-height:100vh; background-color:#dae1e7">
+        <div class="container" data-aos="fade-up" data-aos-duration="3000">
+            <div class="container">
+                <h1 class="hero__logo" data-aos="zoom-in" style="color:black">News</h1>
+                <!--<h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white"><span>For over ten years we have created memorable and effective designs. Designs that captivates. Designs that delivers results. Most importantly... Designs that helps our clients grow.</span></h2>-->
+            </div>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-duration="3000">
+            <div class="row" data-aos="fade-up" data-aos-duration="3000">
+                <div class="column2" style="min-height:600px">
+                    <div class="container" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="flip-card center">
+                            <h2 style="font-size: 40px;color:rgba(0, 0, 0, 0.5); padding:15px"><span>Why Google Loves Good Websites?</span></h2>
+                            <div class="flip-card-innerSLA">
+                                <div class="flip-card-front" style="background-color: transparent">
+                                    <img src="https://www.ceferin.com/glgw.svg" alt="Why Google Loves Good Websites" style="width:300px">
+                                </div>
+                                <div class="flip-card-back center">
+                                    <p class="hero__text" style="padding: 10px;font-size: 20px;color:white">Google prefers pages that are “mobile friendly,” which means they look good and are easy to navigate on mobile devices. A new update to Google's algorithm came out in May that boosted mobile friendly pages even higher in the rankings.</p>
+                                    <a id="GLGW" href="https://www.ceferin.com/What%20is%20the%20best%20approach%20to%20web%20design" class="open-button" style="color:black">Read On...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column2" style="min-height:600px">
+                    <div class="container" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="flip-card center">
+                            <h2 style="font-size: 40px;color:rgba(0, 0, 0, 0.5); padding:15px"><span>What is the Best Approach to Web Design?</span></h2>
+                            <div class="flip-card-innerSLA">
+                                <div class="flip-card-front" style="background-color: transparent">
+                                    <img src="https://www.ceferin.com/mobileDesignNews.svg" alt="Why Google Loves Good Websites" style="width:300px">
+                                </div>
+                                <div class="flip-card-back center">
+                                    <p class="hero__text" style="padding: 10px;font-size: 20px;color:white">Google prefers pages that are “mobile friendly,” which means they look good and are easy to navigate on mobile devices. A new update to Google's algorithm came out in May that boosted mobile friendly pages even higher in the rankings.</p>
+                                    <a id="GLGW" href="https://www.ceferin.com/What%20is%20the%20best%20approach%20to%20web%20design" class="open-button" style="color:black">Read On...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section section--code" style="min-height:100vh; background-color:#dae1e7">
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">

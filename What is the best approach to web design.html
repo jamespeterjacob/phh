@@ -11,7 +11,7 @@
         gtag('config', 'UA-169231947-1');
     </script>
     <meta charset="utf-8">
-    <title>What is the best approach to web design</title>
+    <title>What is the best approach to web design?</title>
     <meta name="description" content="Mobile Responsive Website, Progressive Web Applications, CMS, Copywriting, Graphic Design">
     <meta name="keywords" content="Mobile Responsive Website, Progressive Web Applications, CMS, Copywriting, Graphic Design">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1437,6 +1437,7 @@
             font-family: sans-serif;
             text-align: center;
         }
+
         .dot {
             height: 40px;
             width: 40px;
@@ -1656,11 +1657,11 @@
             border: none;
             cursor: pointer;
             opacity: 0.8;
-            position: fixed;
+            /*position: fixed;*/
             bottom: 23px;
             right: 28px;
             width: 75px;
-            border-radius: 50%;
+            /*border-radius: 50%;*/
         }
 
         /* The popup form - hidden by default */
@@ -1869,6 +1870,67 @@
             font-family: sans-serif;
         }
     </style>
+    <style>
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+        }
+
+        .flip-card-innerSLA {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);*/
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card:hover .flip-card-innerSLA {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .center {
+            margin: auto;
+            width: 100%;
+            padding: 0px;
+        }
+    </style>
 </head>
 <body style="min-height:100%; background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)">
 
@@ -1903,7 +1965,6 @@
     </div>
 
     <section>
-
         <div class="row" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <p class="hero__text" style="text-align:left">This approach means that extensive planning is involved in the creation of the final version. Every detail is carefully calculated and measured so your mobile site does not look like a tacked-on artifact. A bottom-up approach is exactly the opposite. Development occurs on a module-by-module basis, with not much planning or thought involved in the process along the way.</p>
@@ -1946,7 +2007,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <h2><span class="dot"></span> 1. Assessing the Current Situation</h2>
@@ -1993,52 +2053,98 @@
                 <p class="hero__text" style="text-align:left">Then go back to the beginning and iterate. It’s why the user-centred design process for mobile is cyclical. Well, just like all user-centred design processes!</p>
             </div>
         </div>
+    </section>
 
-        <div class="container">
+    <section class="section section--code" style="min-height: 100vh;background-color: #3565b3">
+        <div class="container" data-aos="fade-up" data-aos-duration="3000">
+            <div class="container">
+                <blockquote style="color:white; font-style:italic; font-size:20px">"The mobile web is not a new concept. Deciding whether your users need mobile web facilities is important and then following a user-centred design process offers you the best chance of success. There are significant differences in the way that mobile devices operate compared to other devices and you need to make sure that you handle those differences with care to deliver the best end result."</blockquote>
+                <div class="row">
+                    <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800" style="color:white; font-size:30px">HOW WE RESOLVE PROBLEMS</h2>
+                    <br />
+                    <div class="column4">
+                        <div class="" data-aos="flip-up">
+                            <h5 style="font-size: 20px;color:white"><span>WEBSITE <br />AUDIT</span></h5>
+                            <img src="https://www.ceferin.com/googlelighthouse.svg" alt="Website Audit" style="width:200px">
+                        </div>
+                    </div>
+                    <div class="column4">
+                        <div class="" data-aos="flip-up">
+                            <h5 style="font-size: 20px;color: white"><span>IDENTIFY OPPORTUNITIES</span></h5>
+                            <img src="https://www.ceferin.com/opportunity.svg" alt="Identify Opportunities" style="width:200px">
+                        </div>
+                    </div>
+                    <div class="column4">
+                        <div class="" data-aos="flip-up">
+                            <h5 style="font-size: 20px;color:White"><span>IMPLEMENT CHANGE</span></h5>
+                            <img src="https://www.ceferin.com/change.svg" alt="Implement Change" style="width:200px">
 
-            <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800" style="color:white">The mobile web is not a new concept. Deciding whether your users need mobile web facilities is important and then following a user-centred design process offers you the best chance of success. There are significant differences in the way that mobile devices operate compared to other devices and you need to make sure that you handle those differences with care to deliver the best end result.</h2>
-
+                        </div>
+                    </div>
+                    <div class="column4">
+                        <div class="" data-aos="flip-up">
+                            <h5 style="font-size: 20px;color:White"><span>REPORT &<br /> REPEAT</span></h5>
+                            <img src="https://www.ceferin.com/report.svg" alt="Report & Repeat" style="width:200px">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
+        <div class="container" style="min-height:200px">
+            <div class="row" style="min-height:200px">
+                <!--<button class="open-button" style="background-color: #FF4a27;font-size: 30px;color: black">Enquire Now</button>-->
+                <a id="about" href="https://www.ceferin.com/contact" class="open-button" style="background-color: #FF4a27;font-size: 30px;color: black">Contact Us</a>
+            </div>
+        </div>
     </section>
 
     <!--News-->
+
     <section class="section section--code" style="min-height:100vh; background-color:#dae1e7">
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
-                <h1 class="hero__logo" data-aos="zoom-in">Read More</h1>
+                <h1 class="hero__logo" data-aos="zoom-in" style="color:black">News</h1>
                 <!--<h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" style="color:white"><span>For over ten years we have created memorable and effective designs. Designs that captivates. Designs that delivers results. Most importantly... Designs that helps our clients grow.</span></h2>-->
             </div>
         </div>
-
         <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="row" data-aos="fade-up" data-aos-duration="3000">
-                <div class="container" data-aos="fade-up" data-aos-duration="3000">
-                    <a href="https://www.ceferin.com/Why%20Google%20Loves%20Good%20Websites" style="color:black">
-                        <div class="column2" data-aos="flip-down">
-                            <h2>Why Google Loves Good Websites</h2>
-                            <div style="min-width:300px;min-height:200px">
-                                <img src="https://www.ceferin.com/glgw.svg" alt="Google Loves Good Websites" />
+                <div class="column2" style="min-height:600px">
+                    <div class="container" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="flip-card center">
+                            <h2 style="font-size: 40px;color:rgba(0, 0, 0, 0.5); padding:15px"><span>Why Upgrade Your Website?</span></h2>
+                            <div class="flip-card-innerSLA">
+                                <div class="flip-card-front" style="background-color: transparent">
+                                    <img src="https://www.ceferin.com/googleIndexing.svg" alt="Mobile-First Indexing" style="width:300px">
+                                </div>
+                                <div class="flip-card-back center">
+                                    <p class="hero__text" style="padding: 10px;font-size: 20px;color:white">At the end of 2017, Google announced that they would start slowly rolling out mobile-first indexing. Google decides the readiness of a website for mobile-first indexing based on the parity of text, links, images, and videos, as well as structured data and other metadata.</p>
+                                    <a id="GMFI" href="https://www.ceferin.com/Why%20Upgrade%20Your%20Website.html" class="open-button" style="color:black">Read On...</a>
+                                </div>
                             </div>
-                            <p>Google prefers pages that are “mobile friendly,” which means they look good and are easy to navigate on mobile devices. A new update to Google's algorithm came out in May that boosted mobile friendly pages even higher in the rankings. Read More...</p>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="container" data-aos="fade-up" data-aos-duration="3000">
-                    <a href="https://www.ceferin.com/Why%20Upgrade%20Your%20Website.html" style="color:black">
-                        <div class="column2" data-aos="flip-down">
-                            <h2>Google’s Mobile-First Indexing</h2>
-                            <div style="min-width:300px;min-height:200px">
-                                <img src="https://www.ceferin.com/googleIndexing.svg" alt="Mobile-First Indexing" />
+                <div class="column2" style="min-height:600px">
+                    <div class="container" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="flip-card center">
+                            <h2 style="font-size: 40px;color:rgba(0, 0, 0, 0.5); padding:15px"><span>Why Google Loves Good Websites?</span></h2>
+                            <div class="flip-card-innerSLA">
+                                <div class="flip-card-front" style="background-color: transparent">
+                                    <img src="https://www.ceferin.com/glgw.svg" alt="Why Google Loves Good Websites" style="width:300px">
+                                </div>
+                                <div class="flip-card-back center">
+                                    <p class="hero__text" style="padding: 10px;font-size: 20px;color:white">Google prefers pages that are “mobile friendly,” which means they look good and are easy to navigate on mobile devices. A new update to Google's algorithm came out in May that boosted mobile friendly pages even higher in the rankings.</p>
+                                    <a id="GLGW" href="https://www.ceferin.com/What%20is%20the%20best%20approach%20to%20web%20design" class="open-button" style="color:black">Read On...</a>
+                                </div>
                             </div>
-                            <p>At the end of 2017, Google announced that they would start slowly rolling out mobile-first indexing. By March 2018, Google stated that they were expanding the rollout and instructed websites to prepare. Google decides the readiness of a website for mobile-first indexing based on the parity of text, links, images, and videos, as well as structured data and other metadata... <a href="https://www.ceferin.com/MobileFirstIndexing" style="color:black">Read More</a></p>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
-
     </section>
+
 
     <span style="font-size:12px">© Ceferin Web Solutions, 2020</span>
 
