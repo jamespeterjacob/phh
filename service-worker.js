@@ -1,4 +1,3 @@
-var cache_name = 'ceferin-cache';
 var cached_urls = [
     'offline.html',
     'fourohfour.html',
@@ -17,6 +16,8 @@ var cached_urls = [
     'trenthamEstate.html',
     'style.css'
 ];
+
+var cache_name = 'ceferin-cache';
 
 self.addEventListener('install', function (event) {
     event.waitUntil(
