@@ -1,20 +1,7 @@
 var cached_urls = [
     'offline.html',
-    'fourohfour.html',
-    'account.html',
-    'altontowers.html',
-    'bet365.html',
-    'booking-altonTowers.html',
-    'booking-manchesterAirport.html',
-    'booking-northStaffsHotel.html',
-    'bookings.html',
-    'emmabridgewater.html',
-    'freeportTalke.html',
-    'index.html',
-    'intupotteries.html',
-    'search.html',
-    'trenthamEstate.html',
-    'style.css'
+    'index.html'
+    
 ];
 
 var cache_name = 'ceferin-cache';
@@ -53,7 +40,7 @@ self.addEventListener('fetch', function (event) {
             console.log('Network request for ', event.request.url);
             return fetch(event.request).then(function (response) {
                 if (response.status === 404) {
-                    return caches.match('fourohfour.html');
+                    return caches.match('offline.html');
                 }
                 return caches.open(cached_urls).then(function (cache) {
                     cache.put(event.request.url, response.clone());
