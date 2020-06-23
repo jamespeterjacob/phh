@@ -2065,12 +2065,14 @@
         <span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="3500">
             <img src="https://www.ceferin.com/ceferinBlack.svg" alt="CWS" style="width:200px; height:auto" /> <br />
             <i class="chevron bottom" style="color:#ff4a27"></i>
+           
         </span>
         <div class="item"></div>
         <div class="circle" style="animation-delay: 0s"></div>
         <div class="circle" style="animation-delay: 1s"></div>
         <div class="circle" style="animation-delay: 2s"></div>
         <div class="circle" style="animation-delay: 3s"></div>
+       
     </div>
 
 
@@ -2510,7 +2512,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('https://www.ceferin.com/service-worker.js')
+                navigator.serviceWorker.register('./service-worker.js')
                     .then((reg) => {
                         console.log('Service worker registered.', reg);
                     });
@@ -2553,28 +2555,28 @@
         //];
     </script>
     <script>
-        let deferredPrompt;
+        //let deferredPrompt;
 
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
+        //window.addEventListener('beforeinstallprompt', (e) => {
+        //    e.preventDefault();
+        //    deferredPrompt = e;
 
-            btnAdd.style.display = 'block';
-        });
+        //    btnAdd.style.display = 'block';
+        //});
 
-        btnAdd.addEventListener('click', (e) => {
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    consle.log('User accepted the A2HS prompt');
-                }
-                deferredPrompt = null;
-            });
-        });
+        //btnAdd.addEventListener('click', (e) => {
+        //    deferredPrompt.prompt();
+        //    deferredPrompt.userChoice.then((choiceResult) => {
+        //        if (choiceResult.outcome === 'accepted') {
+        //            consle.log('User accepted the A2HS prompt');
+        //        }
+        //        deferredPrompt = null;
+        //    });
+        //});
 
-        window.addEventListener('appinstalled', (evt) => {
-            app.logEvent('a2hs', 'installed');
-        })
+        //window.addEventListener('appinstalled', (evt) => {
+        //    app.logEvent('a2hs', 'installed');
+        //})
 
     </script>
 

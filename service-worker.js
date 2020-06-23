@@ -3,8 +3,7 @@ var cached_urls = [
     'index.html'
     
 ];
-
-var cache_name = 'ceferin-cache';
+var cache_name = 'ceferin_v1';
 
 self.addEventListener('install', function (event) {
     event.waitUntil(
