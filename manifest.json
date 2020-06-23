@@ -1,5 +1,5 @@
 {
-  "name": "Ceferin",
+  "name": "Ceferin Web Solutions",
   "short_name": "Ceferin",
   "icons": [
     {
@@ -35,6 +35,6 @@
   ],
   "start_url": ".",
   "display": "minimal-ui",
-  "background_color": "#3E4EB8",
-  "theme_color": "#2F3BA2"
+  "background_color": "#ff4b27",
+  "theme_color": "#28a7d5"
 }
