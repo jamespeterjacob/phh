@@ -11,122 +11,7 @@
 
         gtag('config', 'UA-169231947-1');
     </script>
-    <!--<script type="application/ld+json">
-        {
-        "@context": "http://schema.org/",
-        "@type": "Web Solutions",
-        "name": "Ceferin Web Solutions",
-        "image": [
-        "https://www.ceferin.com/OrangeLogo.svg"
-        ],
-        "author": {
-        "@type": "Person",
-        "name": "Ceferin White"
-        },
-        "datePublished": "2020-06-10",
-        "description": "We help design and build responsive websites as well as develop custom applications for your line of business",
-        "prepTime": "PT20M",
-        "cookTime": "PT30M",
-        "totalTime": "PT50M",
-        "recipeYield": "10 servings",
-        "recipeCategory": "Dessert",
-        "recipeCuisine": "American",
-        "keywords": "functional web solutions, custom web application, cms, guaranteed SEO results",
-        "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "270 calories"
-        },
-        "recipeIngredient": [
-        "2 cups of flour",
-        "3/4 cup white sugar",
-        "2 teaspoons baking powder",
-        "1/2 teaspoon salt",
-        "1/2 cup butter",
-        "2 eggs",
-        "3/4 cup milk"
-        ],
-        "recipeInstructions": [
-        {
-        "@type": "HowToStep",
-        "text": "Preheat the oven to 350 degrees F. Grease and flour a 9x9 inch pan."
-        },
-        {
-        "@type": "HowToStep",
-        "text": "In a medium bowl, combine flour, sugar, and cinnamon."
-        },
-        {
-        "@type": "HowToStep",
-        "text": "Mix in butter until the entire mixture is crumbly."
-        },
-        {
-        "@type": "HowToStep",
-        "text": "In a large bowl, combine flour, sugar, baking powder, and salt."
-        },
-        {
-        "@type": "HowToStep",
-        "text": "Mix in the butter."
-        },
-        {
-        "@type": "HowToStep",
-        "text": "Spread into the prepared pan."
-        },
-        {
-        "@type": "HowToStep",
-        "text": "Sprinkle the streusel mixture on top of the cake."
-        },
-        {
-        "@type": "HowToStep",
-        "text": "Bake for 30 to 35 minutes, or until firm."
-        },
-        {
-        "@type": "HowToStep",
-        "text": "Allow to cool."
-        }
-        ],
-        "video": [
-        {
-        "@type": "VideoObject",
-        "name": "How to make a Party Coffee Cake",
-        "description": "This is how you make a Party Coffee Cake.",
-        "thumbnailUrl": [
-        "https://ceferin.com/events.svg",
-        "https://ceferin.com/fashion.svg",
-        "https://ceferin.com/photography.svg"
-        ],
-        "contentUrl": "http://www.example.com/video123.flv",
-        "embedUrl": "http://www.example.com/videoplayer.swf?video=123",
-        "uploadDate": "2018-02-05T08:00:00+08:00",
-        "duration": "PT1M33S",
-        "interactionStatistic": {
-        "@type": "InteractionCounter",
-        "interactionType": { "@type": "http://schema.org/WatchAction" },
-        "userInteractionCount": 2347
-        },
-        "expires": "2020-12-05T08:00:00+08:00"
-        }
-        ],
-        "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "18"
-        },
-        "review": {
-        "@type": "Review",
-        "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4",
-        "bestRating": "5"
-        },
-        "author": {
-        "@type": "Person",
-        "name": "Mary"
-        },
-        "datePublished": "2020-06-10",
-        "reviewBody": "This cake is delicious!",
-        "publisher": "The cake makery"
-        }
-        }
-    </script>-->
+   
 
     <meta charset="utf-8" />
     <title>Ceferin Web Solutions | Functional Web Solutions, Custom Web Applications, CMS</title>
@@ -2057,10 +1942,11 @@
             <h2 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
                 <span class="line2">
                     IT TAKES 7 SECONDS TO MAKE AN IMPRESSION
+
                 </span>
             </h2>
             <h2 class="hero__text"><span class="line2" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="1600" style="color:white">WE DO IT IN 5</span></h2>
-
+            <button id="btnAdd">Install</button>
         </div>
         <span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="3500">
             <img src="https://www.ceferin.com/ceferinBlack.svg" alt="CWS" style="width:200px; height:auto" /> <br />
@@ -2555,28 +2441,28 @@
         //];
     </script>
     <script>
-        //let deferredPrompt;
+        let deferredPrompt;
 
-        //window.addEventListener('beforeinstallprompt', (e) => {
-        //    e.preventDefault();
-        //    deferredPrompt = e;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            btnAdd.style.display = 'block';
+        });
 
-        //    btnAdd.style.display = 'block';
-        //});
+        btnAdd.addEventListener('click', (e) => {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    consle.log('User accepted the A2HS prompt');
+                }
+                deferredPrompt = null;
+            });
+        });
+        
 
-        //btnAdd.addEventListener('click', (e) => {
-        //    deferredPrompt.prompt();
-        //    deferredPrompt.userChoice.then((choiceResult) => {
-        //        if (choiceResult.outcome === 'accepted') {
-        //            consle.log('User accepted the A2HS prompt');
-        //        }
-        //        deferredPrompt = null;
-        //    });
-        //});
-
-        //window.addEventListener('appinstalled', (evt) => {
-        //    app.logEvent('a2hs', 'installed');
-        //})
+        window.addEventListener('appinstalled', (evt) => {
+            app.logEvent('a2hs', 'installed');
+        })
 
     </script>
 
