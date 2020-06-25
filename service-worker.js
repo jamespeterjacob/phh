@@ -13,7 +13,7 @@ self.addEventListener('install', function (event) {
                 '/index.html',
                 '/offline.html',
                 '/work',
-                '/contact',
+                '/contact'
                 //'/realestate.svg',
                 //'/school.svg',
                 //'/healthcare.svg',
