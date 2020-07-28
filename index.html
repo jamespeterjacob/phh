@@ -33,6 +33,13 @@
             font-family: 'Alata';
             font-size: 22px;
         }
+        .centercontainer {
+            margin: auto;
+            width: 100%;
+            height:50%;
+            border: 3px solid green;
+            padding: 10px;
+        }
     </style>
     <style>
         .column4 {
@@ -3533,7 +3540,7 @@
             }
 
             .paraAbout {
-                font-size: 20px;
+                font-size: 16px;
             }
 
             .newsContainer {
@@ -3570,6 +3577,9 @@
             padding: 10px;
             height: 300px; /* Should be removed. Only for demonstration */
         }
+        .slaimage {
+            width: 75%;
+        }
 
         /* Clear floats after the columns */
         .row:after {
@@ -3577,6 +3587,8 @@
             display: table;
             clear: both;
         }
+        
+        
 
         @media screen and (max-width: 600px) {
             .w3-sidebar {
@@ -3586,6 +3598,16 @@
             .column {
                 width: 100%;
                 height: 150px;
+            }
+            .slaimage {
+                height:75%;
+            }
+            .centercontainer {
+                margin: auto;
+                width: 100%;
+                height:50%;
+                border: 3px solid green;
+                padding: 10px;
             }
         }
     </style>
@@ -4007,7 +4029,7 @@
     <nav class="w3-sidebar w3-collapse w3-animate-left" style="z-index:3;width:300px;border-right:medium;border-color:white" id="mySidebar">
         <br>
         <div class="w3-container" style="min-height:200px">
-            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
+            <a href="/index" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
                 <i class="fa fa-remove"></i>
             </a>
             <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://www.ceferin.com/ceferinBlack.svg" alt="CWS" style="width:200px; height:auto" /><br />
@@ -4042,15 +4064,15 @@
                 <!--<a href="#"><img src="" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>-->
                 <span class="w3-button w3-hide-large w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars" style="color:white"></i></span>
                 <!--<div class="w3-container">
-                    <h1><b>My Portfolio</b></h1>
-                    <div class="w3-section w3-bottombar w3-padding-16">
-                        <span class="w3-margin-right">Filter:</span>
-                        <button class="w3-button w3-black">ALL</button>
-                        <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
-                        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
-                        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
-                    </div>
-                </div>-->
+                <h1><b>My Portfolio</b></h1>
+                <div class="w3-section w3-bottombar w3-padding-16">
+                    <span class="w3-margin-right">Filter:</span>
+                    <button class="w3-button w3-black">ALL</button>
+                    <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
+                    <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
+                    <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
+                </div>
+            </div>-->
 
             </header>
 
@@ -4093,7 +4115,7 @@
             <blockquote class="block" style="color:white; font-style:italic">"The Web is here to stay. <br />Barriers to web presence are near-null"</blockquote>
             <div class="w3-padding-large">
                 <h1 class="wwd1"><b>About Us</b></h1>
-                <p class="wwd2 paraAbout" style="color:white">We are a web design agency helping businesses of all size get the best return from their digital presence. We design and build stunning bespoke websites as well as help with online marketing strategies. Though every website that we create is custom designed and built by our team our clients have full content management so that they themselves can update thier website whenever they choose to.</p>
+                <p class="paraAbout" style="color:white">We are a web design agency helping businesses of all size get the best return from their digital presence. We design and build stunning bespoke websites as well as help with online marketing strategies. Though every website that we create is custom designed and built by our team our clients have full content management so that they themselves can update thier website whenever they choose to.</p>
             </div>
         </section>
 
@@ -4198,7 +4220,9 @@
                 </div>
             </div>
         </section>
-
+               <br />
+        <br />
+        <br />
 
         <!-- Our Work-->
         <section id="work" style="min-height:100vh; overflow:hidden">
@@ -4360,7 +4384,7 @@
                                 <div class="w3-xlarge w3-padding-32" style="background-color:#164450;color:white">Custom Web Apps</div>
                                 <div class="w3-padding-16">Content Management</div>
                                 <div class="w3-padding-16">CRM</div>
-                                <div class="w3-padding-16">Learnng Management</div>
+                                <div class="w3-padding-16">Learning Management</div>
                                 <div class="w3-padding-16">Booking System</div>
                                 <div class="w3-padding-16">ECommerce Stores</div>
                                 <div class="w3-light-grey w3-padding-24">
@@ -4387,157 +4411,133 @@
             </div>
         </section>
 
+
         <!-- Our Approach -->
-        <section id="approach" style="min-height:100vh">
-            <h1 class="wwd1"><b>Our Approach</b></h1>
-            <div class="w3-row-padding wwd2">
-                <div class="column">
-                    <div class="" data-aos="flip-up">
-                        <h5><span>WEBSITE AUDIT</span></h5>
-                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/googlelighthouse.svg" alt="Website Audit" style="width:150px" defer />
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="" data-aos="flip-up">
-                        <h5><span>IDENTIFY OPPORTUNITIES</span></h5>
-                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/opportunity.svg" alt="Identify Opportunities" style="width:150px" defer />
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="" data-aos="flip-up">
-                        <h5><span>IMPLEMENT CHANGE</span></h5>
-                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/change.svg" alt="Change Management" style="width:150px" defer />
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="" data-aos="flip-up">
-                        <h5><span>REPORT & REPEAT</span></h5>
-                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/report.svg" alt="Report & Repeat" style="width:150px" defer />
-                    </div>
-                </div>
+        <section id="approach" style="min-height:100%">
+            <h1><b>Our Approach</b></h1>
+            <div class="column" data-aos="flip-up">
+                <h8><span>WEBSITE AUDIT</span></h8>
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/googlelighthouse.svg" alt="Website Audit" class="slaimage" defer />
             </div>
-
-
-
-            <div class="wwd3">
-                <div class="row">
-                    <!--<button class="open-button" style="background-color: #FF4a27;font-size: 30px;color: black">Enquire Now</button>-->
-                    <a id="about" href="https://www.ceferin.com/contact" class="w3-button w3-padding-large" style="background-color:#164450;color:white">Contact Us</a>
-                </div>
+            <div class="column" data-aos="flip-up">
+                <h8><span>IDENTIFY OPPORTUNITIES</span></h8>
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/opportunity.svg" alt="Identify Opportunities" class="slaimage" defer />
             </div>
+            <div class="column" data-aos="flip-up">
+                <h8><span>IMPLEMENT CHANGE</span></h8>
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/change.svg" alt="Change Management" class="slaimage" defer />
+            </div>
+            <div class="column" data-aos="flip-up">
+                <h8><span>REPORT & REPEAT</span></h8>
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/report.svg" alt="Report & Repeat" class="slaimage" defer />
+            </div>
+            <p>
+                <a href="/contact">
+                    <button class="w3-button w3-padding-large w3-margin-top w3-margin-bottom" style="background-color:#164450;color:white">
+                        <i class="fa fa-search w3-margin-right"></i>Free Audit
+                    </button>
+                </a>
+            </p>
         </section>
+        <br />
+        <br />
+        <br />
+        <br />
 
 
         <!-- Our SLA-->
-        <section id="sla" style="min-height:100vh; overflow:hidden">
-            <header id="portfolio">
-                <!--<a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>-->
-                <!--<span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>-->
-                <div class="w3-container">
-                    <h1 class="wwd1"><b>Our SLA</b></h1>
-                    <!--<div class="w3-section w3-bottombar w3-padding-16">
-                        <span class="w3-margin-right">Filter:</span>
-                        <button class="w3-button w3-black">ALL</button>
-                        <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Websites</button>
-                        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Web Apps</button>
-                        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
-                    </div>-->
-                </div>
-            </header>
-            <div class="row">
-                <div class="column">
-                    <div class="" data-aos="flip-up">
-                        <div class="flip-card center" style="border:none">
-                            <div class="flip-card-innerSLA">
-                                <div class="flip-card-front">
-                                    <h3>Performance</h3>
-                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
-                                        <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                        <circle class="circle-chart__circle" stroke="#63dc16" stroke-width="2" stroke-dasharray="90,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                        <g class="circle-chart__info" style="color: #63dc16">
-                                            <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#63dc16">90%</text>
-                                            <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="flip-card-back">
-                                    <div style="background-color: #324a9d">
-                                        <p class="hero__text" style="padding: 10px;color:white">Website speed, or website performance, refers to how quickly a browser is able to load fully functional webpages from a given site. Conversely, sites that load quickly will typically receive more traffic and have better conversion rates.</p>
-                                    </div>
+        <section id="sla" style="max-height:100%">
+            <h1><b>Our SLA</b></h1>
+            <div class="column">
+                <div class="" data-aos="flip-up">
+                    <div class="flip-card center" style="border:none">
+                        <div class="flip-card-innerSLA">
+                            <div class="flip-card-front">
+                                <h5>Performance </h5>
+                                <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                    <circle class="circle-chart__circle" stroke="#63dc16" stroke-width="2" stroke-dasharray="90,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                    <g class="circle-chart__info" style="color: #63dc16">
+                                        <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color:#63dc16">90%</text>
+                                        <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back">
+                                <div style="background-color: #324a9d">
+                                    <p class="hero__text" style="padding: 10px;color:white">Website speed, or website performance, refers to how quickly a browser is able to load fully functional webpages from a given site. Conversely, sites that load quickly will typically receive more traffic and have better conversion rates.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
-                        <div class="flip-card center" style="border:none">
-                            <div class="flip-card-innerSLA">
-                                <div class="flip-card-front" style="background-color: transparent">
-                                    <h3>Best Practices</h3>
-                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
-                                        <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                        <circle class="circle-chart__circle" stroke="#63dc16" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                        <g class="circle-chart__info" style="color: #63dc16">
-                                            <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color: #63dc16">100%</text>
-                                            <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="flip-card-back">
-                                    <div style="background-color: #324a9d">
-                                        <p class="hero__text" style="padding: 10px;color:white">Web design standards like navigation, color scheme, and utilization of social media and email marketing will ensure greater business success and optimization of leads.</p>
-                                    </div>
-
+            </div>
+            <div class="column">
+                <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
+                    <div class="flip-card center" style="border:none">
+                        <div class="flip-card-innerSLA">
+                            <div class="flip-card-front" style="background-color: transparent">
+                                <h5>Best Practices </h5>
+                                <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                    <circle class="circle-chart__circle" stroke="#63dc16" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                    <g class="circle-chart__info" style="color: #63dc16">
+                                        <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color: #63dc16">100%</text>
+                                        <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back">
+                                <div style="background-color: #324a9d">
+                                    <p class="hero__text" style="padding: 10px;color:white">Web design standards like navigation, color scheme, and utilization of social media and email marketing will ensure greater business success and optimization of leads.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
-                        <div class="flip-card center" style="border:none">
-                            <div class="flip-card-innerSLA">
-                                <div class="flip-card-front" style="background-color: transparent">
-                                    <h3>Accessibility</h3>
-                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
-                                        <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                        <circle class="circle-chart__circle" stroke="#63dc16" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                        <g class="circle-chart__info" style="color: #63dc16">
-                                            <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color: #63dc16">100%</text>
-                                            <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="flip-card-back">
-                                    <div style="background-color: #324a9d">
-                                        <p class="hero__text" style="padding: 10px;color:white">Web accessibility depends on several components working together, including web technologies, web browsers and other "user agents", authoring tools, and websites.</p>
-                                    </div>
+            </div>
+            <div class="column">
+                <div class="" data-aos="flip-up" data-aos-duration="3000" style="background-color: transparent">
+                    <div class="flip-card center" style="border:none">
+                        <div class="flip-card-innerSLA">
+                            <div class="flip-card-front" style="background-color: transparent">
+                                <h5>Accessibility </h5>
+                                <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                    <circle class="circle-chart__circle" stroke="#63dc16" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                    <g class="circle-chart__info" style="color: #63dc16">
+                                        <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color: #63dc16">100%</text>
+                                        <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back">
+                                <div style="background-color: #324a9d">
+                                    <p class="hero__text" style="padding: 10px;color:white">Web accessibility depends on several components working together, including web technologies, web browsers and other "user agents", authoring tools, and websites.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="" data-aos="flip-up" data-aos-duration="6000" style="background-color: transparent">
-                        <div class="flip-card center" style="border:none">
-                            <div class="flip-card-innerSLA">
-                                <div class="flip-card-front" style="background-color: transparent">
-                                    <h3>SEO</h3>
-                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
-                                        <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                        <circle class="circle-chart__circle" stroke="#63dc16" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-                                        <g class="circle-chart__info" style="color: #63dc16">
-                                            <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color: #63dc16">100%</text>
-                                            <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="flip-card-back" style="vertical-align:middle">
-                                    <div style="background-color: #324a9d">
-                                        <p class="hero__text" style="padding: 10px;color:white"><span>Search Engine Optimization is the practice of increasing both the quality and quantity of website traffic, as well as exposure to brand, through non-paid (aka "organic") search engine results.</span></p>
-                                    </div>
-
+            </div>
+            <div class="column">
+                <div class="" data-aos="flip-up" data-aos-duration="6000" style="background-color: transparent">
+                    <div class="flip-card center" style="border:none">
+                        <div class="flip-card-innerSLA">
+                            <div class="flip-card-front" style="background-color: transparent">
+                                <h5>SEO </h5>
+                                <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                    <circle class="circle-chart__circle" stroke="#63dc16" stroke-width="2" stroke-dasharray="100,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                    <g class="circle-chart__info" style="color: #63dc16">
+                                        <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" style="color: #63dc16">100%</text>
+                                        <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2"></text>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back" style="vertical-align:middle">
+                                <div style="background-color: #324a9d">
+                                    <p class="hero__text" style="padding: 10px;color:white"><span>Search Engine Optimization is the practice of increasing both the quality and quantity of website traffic, as well as exposure to brand, through non-paid (aka "organic") search engine results.</span></p>
                                 </div>
                             </div>
                         </div>
@@ -4552,9 +4552,13 @@
                 </a>
             </p>
         </section>
+        <br />
+        <br />
+        <br />
+        <br />
 
         <!-- NEWS -->
-        <section id="news" class="newsSection">
+        <div id="news" class="newsSection" style="min-height:100%">
             <div class="row">
                 <div class="" data-aos="fade-up" data-aos-duration="3000">
                     <div class="">
@@ -4588,7 +4592,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="chevron top" style="color:#ff4a27"></i></button>
         <div class="w3-center w3-padding-24" style="bottom:0;width:100%">© Ceferin Web Solutions</div>
